@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>TECH whale</title>
+  
+  <subtitle>Exploring the World of technology and Innovation</subtitle>
+  <link href="https://tech.he0xwhale.xyz/atom.xml" rel="self"/>
+  
+  <link href="https://tech.he0xwhale.xyz/"/>
+  <updated>2025-06-19T08:20:49.378Z</updated>
+  <id>https://tech.he0xwhale.xyz/</id>
+  
+  <author>
+    <name>he0xwhale</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://tech.he0xwhale.xyz/2025/06/19/Hello-World/"/>
+    <id>https://tech.he0xwhale.xyz/2025/06/19/Hello-World/</id>
+    <published>2025-06-19T08:20:49.000Z</published>
+    <updated>2025-06-19T08:20:49.378Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+</feed>

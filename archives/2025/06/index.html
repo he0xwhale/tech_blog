@@ -717,6 +717,163 @@ button {
   -moz-opacity: 1;
   border-bottom: 2px solid var(--color-site-inner);
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+  :root:not([color-scheme]) {
+    --color-site-body: #121212;
+    --color-read-bkg: #1f1f1f;
+    --color-read-post: #262626;
+    --color-site-bg: #1f1f1f;
+    --color-site-inner: rgba(238,238,238,0.871);
+    --color-site-footer: rgba(170,170,170,0.871);
+    --color-card: #262626;
+    --color-text: rgba(238,238,238,0.871);
+    --color-block: #434343;
+    --color-codeblock: #1f1f1f;
+    --color-inlinecode: #d56d28;
+    --color-h1: rgba(255,255,255,0.871);
+    --color-h2: rgba(255,255,255,0.871);
+    --color-h3: rgba(255,255,255,0.6);
+    --color-h4: rgba(255,255,255,0.6);
+    --color-h5: rgba(255,255,255,0.6);
+    --color-h6: rgba(255,255,255,0.6);
+    --color-p: rgba(217,217,217,0.871);
+    --color-list: rgba(217,217,217,0.871);
+    --color-list-hl: #63e0c4;
+    --color-meta: rgba(191,191,191,0.871);
+    --color-link: rgba(191,191,191,0.871);
+    --color-copyright-bkg: #21252b;
+    --link-color: #e4e4e4;
+  }
+  :root:not([color-scheme]) img {
+    filter: brightness(70%) !important;
+  }
+  :root:not([color-scheme]) .blur {
+    background: rgba(31,31,31,0.9) !important;
+  }
+  :root:not([color-scheme]) .white-box.blur {
+    background: rgba(38,38,38,0.9) !important;
+  }
+  :root:not([color-scheme]) .nav-main .u-search-input {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a:hover {
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) .article blockquote {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .article-title a {
+    color: var(--color-h1) !important;
+  }
+  :root:not([color-scheme]) details>summary {
+    color: var(--color-p) !important;
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) details {
+    border: 1px solid var(--color-site-bg) !important;
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal,
+  :root:not([color-scheme]) #u-search .modal-header,
+  :root:not([color-scheme]) #u-search .modal-body {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal-body .modal-results .result:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:focus {
+    background: var(--color-site-body) !important;
+  }
+}
+[color-scheme='dark'] {
+  --color-site-body: #121212;
+  --color-read-bkg: #1f1f1f;
+  --color-read-post: #262626;
+  --color-site-bg: #1f1f1f;
+  --color-site-inner: rgba(238,238,238,0.871);
+  --color-site-footer: rgba(170,170,170,0.871);
+  --color-card: #262626;
+  --color-text: rgba(238,238,238,0.871);
+  --color-block: #434343;
+  --color-codeblock: #1f1f1f;
+  --color-inlinecode: #d56d28;
+  --color-h1: rgba(255,255,255,0.871);
+  --color-h2: rgba(255,255,255,0.871);
+  --color-h3: rgba(255,255,255,0.6);
+  --color-h4: rgba(255,255,255,0.6);
+  --color-h5: rgba(255,255,255,0.6);
+  --color-h6: rgba(255,255,255,0.6);
+  --color-p: rgba(217,217,217,0.871);
+  --color-list: rgba(217,217,217,0.871);
+  --color-list-hl: #63e0c4;
+  --color-meta: rgba(191,191,191,0.871);
+  --color-link: rgba(191,191,191,0.871);
+  --color-copyright-bkg: #21252b;
+  --link-color: #e4e4e4;
+}
+[color-scheme='dark'] img {
+  filter: brightness(70%) !important;
+}
+[color-scheme='dark'] .blur {
+  background: rgba(31,31,31,0.9) !important;
+}
+[color-scheme='dark'] .white-box.blur {
+  background: rgba(38,38,38,0.9) !important;
+}
+[color-scheme='dark'] .nav-main .u-search-input {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a:hover {
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] .article blockquote {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .article-title a {
+  color: var(--color-h1) !important;
+}
+[color-scheme='dark'] details>summary {
+  color: var(--color-p) !important;
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] details {
+  border: 1px solid var(--color-site-bg) !important;
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] #u-search .modal,
+[color-scheme='dark'] #u-search .modal-header,
+[color-scheme='dark'] #u-search .modal-body {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #u-search .modal-body .modal-results .result:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:focus {
+  background: var(--color-site-body) !important;
+}
+@media screen and (max-width: 500px) {
+  [color-scheme='dark'] .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
+[color-scheme='dark'] .friend-card.color-bk-dark {
+  filter: brightness(0.8);
+}
 @font-face {
   font-family: 'UbuntuMono';
   src: url("https://unpkg.com/volantis-static@0.0.1660614606622/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
@@ -1553,10 +1710,21 @@ ul.list-v >li>a:hover {
     padding: 0px;
   }
 }
+@media screen and (prefers-color-scheme: dark) and (max-width: 500px) {
+  .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
 
                                                                                                                 </style>
                                                                                                                 <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
                                                                                                                 <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+                                                                                                                    <script>
+                                                                                                                        let userColorScheme = localStorage.getItem("color-scheme")
+                                                                                                                        if (userColorScheme) {
+                                                                                                                            document.documentElement.setAttribute("color-scheme", userColorScheme);
+                                                                                                                        }
+                                                                                                                    </script>
                                                                                                                         
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1997,7 +2165,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1750663895174),
+    lastupdate: new Date(1750749560402),
     cdn: {
       izitoast_css: 'https://unpkg.com/izitoast@1.4.0/dist/css/iziToast.min.css',
       izitoast_js: 'https://unpkg.com/izitoast@1.4.0/dist/js/iziToast.min.js',
@@ -2400,6 +2568,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
         
+          
+        
       
     
     
@@ -2407,7 +2577,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="https://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://tech.he0xwhale.xyz/2025/06/19/Hello-World/">
+    <link itemprop="mainEntityOfPage" href="https://tech.he0xwhale.xyz/2025/06/24/ubuntu_die/">
     <span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="TECH whale">
   </span>
@@ -2418,31 +2588,121 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
         
                 
-                        <span hidden>
-      <meta itemprop="image" content="/images/seo/logo_seo.png">
-    </span>
-                        
+                    <div class='headimg-div'>
+                        <a class='headimg-a' href="/2025/06/24/ubuntu_die/">
+        <img itemprop="image" class='headimg' alt="Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战" src='/images/cover/ubuntu_die.png'/>
+      </a>
+                    </div>
+                    
                             
                                 
                                     <h2 class="article-title"  itemprop="name headline">
-                                        <a href="/2025/06/19/Hello-World/" itemprop="url">
-                                            Hello World
+                                        <a href="/2025/06/24/ubuntu_die/" itemprop="url">
+                                            Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战
                                         </a>
                                     </h2>
                                     
                                             <div class='md article-desc' itemprop="articleBody">
                                                 
+                                                                
+                                                                    Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战在日常使用 Ubuntu 桌面系统时，偶尔会遇到切换应用程序时系统彻底卡死的情况。特别是在操作大量文件、删除大文件夹时，系统响应迟缓，CPU 占用飙升，图形界面几乎失效，令人十分头疼。本文结合实战经验，分享在系统卡顿时的应急处理步骤以及如何高效删除包含大量小文件的大文件夹，帮助你快速恢复系统并避免类似问题再次发生。
+
+一、系统卡顿时如何...
+                                                                        
+                                                                                    
                                             </div>
                                             
                                                 <div class='meta-v3' line_style='solid'>
                                                     <div>
                                                         
-                                                                    <time itemprop="dateCreated datePublished" datetime="2025-06-19T16:20:49+08:00">2025-06-19</time>
+                                                            
+                                                                <a class='avatar' href='/'><img src='images/website/logo.png'></a>
+                                                                <span hidden itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <meta itemprop="image" content="images/website/logo.png">
+            <meta itemprop="name" content="he0xwhale">
+            <meta itemprop="url" content="/">
+          </span>
+                                                                
+                                                                    <time itemprop="dateCreated datePublished" datetime="2025-06-24T10:30:41+08:00">2025-06-24</time>
                                                                     
                                                     </div>
                                                     
                                                         <div>
-                                                            <a class='readmore' href='/2025/06/19/Hello-World/' itemprop="url">
+                                                            <a class='readmore' href='/2025/06/24/ubuntu_die/' itemprop="url">
+                                                                Read More
+                                                            </a>
+                                                        </div>
+                                                        
+                                                </div>
+                                                
+
+</div>
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://tech.he0xwhale.xyz/2025/06/24/volantis_cyberpunk_style_avatar_bug/">
+    <span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+    <meta itemprop="name" content="TECH whale">
+  </span>
+    <span hidden itemprop="post" itemscope itemtype="https://schema.org/Post">
+    <meta itemprop="name" content="TECH whale">
+    <meta itemprop="description" content="A blog dedicated to technology and Innovation">
+  </span>
+    
+        
+                
+                    <div class='headimg-div'>
+                        <a class='headimg-a' href="/2025/06/24/volantis_cyberpunk_style_avatar_bug/">
+        <img itemprop="image" class='headimg' alt="Volantis 博客赛博朋克主题样式与头像加载问题的排查记录" src='/images/cover/volantis_cyberpunk_style_avatar_bug.png'/>
+      </a>
+                    </div>
+                    
+                            
+                                
+                                    <h2 class="article-title"  itemprop="name headline">
+                                        <a href="/2025/06/24/volantis_cyberpunk_style_avatar_bug/" itemprop="url">
+                                            Volantis 博客赛博朋克主题样式与头像加载问题的排查记录
+                                        </a>
+                                    </h2>
+                                    
+                                            <div class='md article-desc' itemprop="articleBody">
+                                                
+                                                                
+                                                                    本文记录了我在使用 Hexo + Volantis 主题搭建赛博朋克风格博客过程中，进行样式自定义和头像加载问题排查的过程。
+🌌 博客整体风格设定（赛博朋克）我为博客配置了一套基于深蓝紫夜色 + 霓虹光效的赛博朋克视觉主题，主要特性包括：
+🎨 页面颜色主题12345678910111213141516:root &#123;  --bg-color: #0f0f1a; /* 深靛夜蓝 *...
+                                                                        
+                                                                                    
+                                            </div>
+                                            
+                                                <div class='meta-v3' line_style='solid'>
+                                                    <div>
+                                                        
+                                                            
+                                                                <a class='avatar' href='/'><img src='images/website/logo.png'></a>
+                                                                <span hidden itemprop="author" itemscope itemtype="https://schema.org/Person">
+            <meta itemprop="image" content="images/website/logo.png">
+            <meta itemprop="name" content="he0xwhale">
+            <meta itemprop="url" content="/">
+          </span>
+                                                                
+                                                                    <time itemprop="dateCreated datePublished" datetime="2025-06-24T10:22:41+08:00">2025-06-24</time>
+                                                                    
+                                                                        <span class="dot"></span>
+                                                                        <a class="category-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
+                                                                            
+                                                                                <span hidden itemprop="about" itemscope itemtype="https://schema.org/Thing">
+              <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url"><span itemprop="name">博客搭建</span></a>
+                                                                                </span>
+                                                                                
+                                                                                    
+                                                    </div>
+                                                    
+                                                        <div>
+                                                            <a class='readmore' href='/2025/06/24/volantis_cyberpunk_style_avatar_bug/' itemprop="url">
                                                                 Read More
                                                             </a>
                                                         </div>
@@ -2475,10 +2735,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
                 
                     <a class='avatar flat-box rectangle' href='/about/'>
-          <!-- <img no-lazy src='/images/website/avatar.png?v=1'/> -->
+          <!-- <img no-lazy src='/images/website/avatar.png'/> -->
           <!-- <img no-lazy src="/images/website/avatar.png" /> -->
           <!-- <img src="/TEST123456.png" class="lazyload" data-srcset="/TEST123456.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /> -->
-          <img src="/images/website/avatar.png?v=1?ts=1750663895545" class="lazyload" data-srcset="/images/website/avatar.png?v=1?ts=1750663895545" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
+          <img src="/images/website/avatar.png?ts=1750749560774" class="lazyload" data-srcset="/images/website/avatar.png?ts=1750749560774" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
         </a>
                     
                             
@@ -2535,6 +2795,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
+  
+  <section class="widget category desktop">
+    
+  <header>
+    
+      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <ul class="entry navigation">
+        
+          <li><a class="flat-box"
+            title="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"
+            active-action="action-categoriesE58D9AE5AEA2E690ADE5BBBA"
+            ><div class='name'>博客搭建</div><div class='badge'>(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
 
     
   
@@ -2543,6 +2825,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
+  
+  <section class="widget tagcloud desktop mobile">
+    
+  <header>
+    
+      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+    
+  </header>
+
+
+    <div class='content'>
+      <a href="/tags/Bug%E6%8E%92%E6%9F%A5/" style="font-size: 14px; color: #999">Bug排查</a> <a href="/tags/CSS%E4%B8%BB%E9%A2%98/" style="font-size: 14px; color: #999">CSS主题</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu </a> <a href="/tags/Volantis/" style="font-size: 14px; color: #999">Volantis</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" style="font-size: 14px; color: #999">博客美化</a> <a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" style="font-size: 14px; color: #999">性能优化</a> <a href="/tags/%E6%96%87%E4%BB%B6%E5%88%A0%E9%99%A4/" style="font-size: 14px; color: #999">文件删除</a> <a href="/tags/%E7%B3%BB%E7%BB%9F%E5%8D%A1%E9%A1%BF/" style="font-size: 14px; color: #999">系统卡顿</a> <a href="/tags/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" style="font-size: 14px; color: #999">进程管理</a>
+    </div>
+  </section>
+
 
     
   
@@ -2572,7 +2869,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                     文章数目：
                                 </div>
                                 <div>
-                                    1
+                                    2
                                         篇
                                 </div>
                             </div>
@@ -2594,7 +2891,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                                     本站总字数：
                                                 </div>
                                                 <div>
-                                                    0
+                                                    1.6k
                                                         字
                                                 </div>
                                             </div>
@@ -2631,7 +2928,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                                                     最后活动时间：
                                                                 </div>
                                                                 <div id="last-update-show">
-                                                                    2025-06-23
+                                                                    2025-06-24
                                                                         日
                                                                 </div>
                                                             </div>
@@ -2732,6 +3029,121 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "color-scheme";
+const rootElementDarkModeAttributeName = "color-scheme";
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+  getCustomDarkMode();
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+/**
+ * get target mode
+ */
+ const getCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  if(currentSetting=="dark"){
+    volantis.dark.mode="light";
+  }else{
+    volantis.dark.mode="dark";
+  }
+  // console.log(volantis.dark.mode)
+};
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+/**
+ * 暗黑模式触发器
+ */
+volantis.dark.toggle=()=>{
+  const mode = toggleCustomDarkMode();
+  applyCustomDarkModeSettings(mode);
+  // 使用 volantis.dark.push 方法传入volantis.dark.toggle回调函数 参见layout/_partial/scripts/global.ejs
+  volantis.dark.method.toggle.start();
+}
+/**
+ * bind event for toggle button
+ */
+
+function bindToggleButton() {
+  var btn= document.querySelectorAll("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn")
+  btn.forEach(function (e) {
+    volantis.dom.$(e).on('click',volantis.dark.toggle);
+  })
+}
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", ()=>{
+  volantis.requestAnimationFrame(bindToggleButton)
+});
+
+const darkModelListeners={
+  dark:(mediaQueryList )=>{
+    if(mediaQueryList.matches){
+      volantis.dark.mode = "dark";
+    }
+    volantis.dark.method.toggle.start();
+  },
+  light:(mediaQueryList)=>{
+    if(mediaQueryList.matches){
+      volantis.dark.mode = "light";
+    }
+    volantis.dark.method.toggle.start();
+  }
+}
+window.matchMedia('(prefers-color-scheme: dark)').addListener(darkModelListeners.dark)
+window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListeners.light)
+</script>
+
 
 
 

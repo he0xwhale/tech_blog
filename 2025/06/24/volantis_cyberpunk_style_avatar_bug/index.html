@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <!-- SEO相关 -->
         
-            <link rel="canonical" href="https://tech.he0xwhale.xyz/friends/"/>
+            <link rel="canonical" href="https://tech.he0xwhale.xyz/2025/06/24/volantis_cyberpunk_style_avatar_bug/"/>
                 <!-- 渲染优化 -->
                     <meta http-equiv='x-dns-prefetch-control' content='on' />
                         <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,21 +34,25 @@
                                                                             <!-- feed -->
                                                                                     <link rel="alternate" href="/atom.xml" title="TECH whale" type="application/atom+xml">
                                                                                                 <!-- 页面元数据 -->
-                                                                                                <title>友链 - TECH whale</title>
-                                                                                                    <meta name="keywords" content="technology,innovation">
+                                                                                                <title>Volantis 博客赛博朋克主题样式与头像加载问题的排查记录 - TECH whale</title>
+                                                                                                    <meta name="keywords" content="Hexo,Volantis,博客美化,CSS主题,Bug排查,technology,innovation">
                                                                                                         <meta desc name="description" content="A blog dedicated to technology and Innovation - he0xwhale - TECH whale">
                                                                                                             
-<meta property="og:type" content="website">
-<meta property="og:title" content="友链">
-<meta property="og:url" content="https://tech.he0xwhale.xyz/friends/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Volantis 博客赛博朋克主题样式与头像加载问题的排查记录">
+<meta property="og:url" content="https://tech.he0xwhale.xyz/2025/06/24/volantis_cyberpunk_style_avatar_bug/index.html">
 <meta property="og:site_name" content="TECH whale">
-<meta property="og:description" content="欢迎交换友链，请留言或联系我。 友情链接 Hexo 官方文档 Volantis 主题文档">
+<meta property="og:description" content="本文记录了我在使用 Hexo + Volantis 主题搭建赛博朋克风格博客过程中，进行样式自定义和头像加载问题排查的过程。 🌌 博客整体风格设定（赛博朋克）我为博客配置了一套基于深蓝紫夜色 + 霓虹光效的赛博朋克视觉主题，主要特性包括： 🎨 页面颜色主题12345678910111213141516:root &amp;#123;  --bg-color: #0f0f1a; &#x2F;* 深靛夜蓝 *&#x2F;">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://tech.he0xwhale.xyz/images/seo/og_seo.png">
-<meta property="article:published_time" content="2025-06-18T07:54:03.728Z">
-<meta property="article:modified_time" content="2025-06-18T07:54:03.728Z">
+<meta property="article:published_time" content="2025-06-24T02:22:41.000Z">
+<meta property="article:modified_time" content="2025-06-24T03:27:30.809Z">
 <meta property="article:author" content="he0xwhale">
-<meta property="article:tag" content="technology,innovation">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Volantis">
+<meta property="article:tag" content="博客美化">
+<meta property="article:tag" content="CSS主题">
+<meta property="article:tag" content="Bug排查">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://tech.he0xwhale.xyz/images/seo/og_seo.png">
                                                                                                                 <style>
@@ -2159,7 +2163,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2527,8 +2531,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                                     <div class="body-wrapper">
                                                         
 <div id="l_main" class=''>
-  <article itemscope itemtype="https://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-page" id="page" itemscope itemprop="blogPost">
-    <link itemprop="mainEntityOfPage" href="https://tech.he0xwhale.xyz/friends/index.html">
+  <article itemscope itemtype="https://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+    <link itemprop="mainEntityOfPage" href="https://tech.he0xwhale.xyz/2025/06/24/volantis_cyberpunk_style_avatar_bug/">
     <span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="TECH whale">
   </span>
@@ -2540,16 +2544,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   
-    <span hidden>
-      <meta itemprop="image" content="/images/seo/logo_seo.png">
-    </span>
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img itemprop="image" class='headimg' src='/images/cover/volantis_cyberpunk_style_avatar_bug.png'/>
+      </a>
+    </div>
   
   <div class="article-meta" id="top">
     
     
     
       <h1 class="title" itemprop="name headline">
-        友链
+        Volantis 博客赛博朋克主题样式与头像加载问题的排查记录
       </h1>
       <div class='new-meta-box'>
         
@@ -2565,13 +2571,27 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
             
+    
+        
+            
+                <div class='new-meta-item category'>
+                    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+                    <a class="category-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
+                        
+                            <span hidden itemprop="about" itemscope itemtype="https://schema.org/Thing">
+        <a href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" itemprop="url"><span itemprop="name">博客搭建</span></a>
+                            </span>
+                            
+                </div>
+                
+                    
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-06-18T15:54:03+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-06-24T10:22:41+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jun 18, 2025</p>
+    <p>发布于：Jun 24, 2025</p>
   </a>
 </div>
 
@@ -2582,13 +2602,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>27 words</p>
+      <p>727 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>1 min</p>
+      <p>3 min</p>
     </a>
   </div>
 
@@ -2598,6 +2618,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             
 
+
+<div class="new-meta-item browse">
+  <a class='notlink'>
+    <p>
+      <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+      
+      <span id="busuanzi_page_pv">
+        <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
+      </span>
+        
+      <span>次浏览</span>
+    </p>
+  </a>
+</div>
 
 
           
@@ -2612,15 +2646,60 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
         <div id="layoutHelper-page-plugins"></div>
         <div id="post-body" itemprop="articleBody">
-            <p>欢迎交换友链，请留言或联系我。</p>
-<h2 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接"></a>友情链接</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo 官方文档</a></li>
-<li><a target="_blank" rel="noopener" href="https://volantis.js.org/">Volantis 主题文档</a></li>
+            <p>本文记录了我在使用 Hexo + Volantis 主题搭建赛博朋克风格博客过程中，进行样式自定义和头像加载问题排查的过程。</p>
+<h2 id="🌌-博客整体风格设定（赛博朋克）"><a href="#🌌-博客整体风格设定（赛博朋克）" class="headerlink" title="🌌 博客整体风格设定（赛博朋克）"></a>🌌 博客整体风格设定（赛博朋克）</h2><p>我为博客配置了一套基于<strong>深蓝紫夜色 + 霓虹光效</strong>的赛博朋克视觉主题，主要特性包括：</p>
+<h3 id="🎨-页面颜色主题"><a href="#🎨-页面颜色主题" class="headerlink" title="🎨 页面颜色主题"></a>🎨 页面颜色主题</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attr">--bg-color</span>: <span class="number">#0f0f1a</span>; <span class="comment">/* 深靛夜蓝 */</span></span><br><span class="line">  <span class="attr">--accent-color</span>: <span class="number">#ff00ff</span>; <span class="comment">/* 紫红霓虹 */</span></span><br><span class="line">  <span class="attr">--primary-color</span>: <span class="number">#00ffff</span>; <span class="comment">/* 亮蓝青色 */</span></span><br><span class="line">  <span class="attr">--text-color</span>: <span class="number">#e0e0e0</span>; <span class="comment">/* 灰白文字 */</span></span><br><span class="line">  <span class="attr">--card-color</span>: <span class="number">#1a1a2e</span>; <span class="comment">/* 内容卡片深蓝紫 */</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span>,</span><br><span class="line"><span class="selector-class">.page</span>,</span><br><span class="line"><span class="selector-class">.header</span>,</span><br><span class="line"><span class="selector-class">.footer</span>,</span><br><span class="line"><span class="selector-class">.main</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">var</span>(--bg-color) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--text-color) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&quot;Orbitron&quot;</span>, <span class="string">&quot;Roboto Mono&quot;</span>, monospace;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="🧊-毛玻璃与卡片样式"><a href="#🧊-毛玻璃与卡片样式" class="headerlink" title="🧊 毛玻璃与卡片样式"></a>🧊 毛玻璃与卡片样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.blur</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgba</span>(<span class="number">15</span>, <span class="number">15</span>, <span class="number">30</span>, <span class="number">0.6</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">backdrop-filter</span>: <span class="built_in">saturate</span>(<span class="number">180%</span>) <span class="built_in">blur</span>(<span class="number">12px</span>);</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.15</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.card</span>,</span><br><span class="line"><span class="selector-class">.flat-box</span>,</span><br><span class="line"><span class="selector-class">.white-box</span> &#123;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">12px</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0.1</span>);</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">12px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="🔠-封面标题与副标题（霓虹描边）"><a href="#🔠-封面标题与副标题（霓虹描边）" class="headerlink" title="🔠 封面标题与副标题（霓虹描边）"></a>🔠 封面标题与副标题（霓虹描边）</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.cover-wrapper</span> <span class="selector-class">.cover-body</span> <span class="selector-class">.title</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#ffffff</span>;</span><br><span class="line">  <span class="attribute">text-shadow</span>:</span><br><span class="line">    <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#0ff</span>,</span><br><span class="line">    <span class="number">0</span> <span class="number">0</span> <span class="number">10px</span> <span class="number">#0ff</span>,</span><br><span class="line">    <span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="number">#09f</span>,</span><br><span class="line">    <span class="number">0</span> <span class="number">0</span> <span class="number">20px</span> <span class="number">#90f</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.cover-wrapper</span> <span class="selector-class">.cover-body</span> <span class="selector-class">.subtitle</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#ffffff</span>;</span><br><span class="line">  <span class="attribute">text-shadow</span>:</span><br><span class="line">    <span class="number">0</span> <span class="number">0</span> <span class="number">4px</span> <span class="number">#fff</span>,</span><br><span class="line">    <span class="number">0</span> <span class="number">0</span> <span class="number">8px</span> <span class="number">#f0f</span>,</span><br><span class="line">    <span class="number">0</span> <span class="number">0</span> <span class="number">12px</span> <span class="number">#f0f</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="🧭-顶栏与侧边栏"><a href="#🧭-顶栏与侧边栏" class="headerlink" title="🧭 顶栏与侧边栏"></a>🧭 顶栏与侧边栏</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#l_header</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">linear-gradient</span>(to right, <span class="number">#1f0036</span>, <span class="number">#000f3f</span>) <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">15px</span> <span class="built_in">var</span>(--accent-color);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#l_side</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#111120</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#e0e0e0</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#l_side</span> <span class="selector-class">.widget</span>,</span><br><span class="line"><span class="selector-id">#l_side</span> <span class="selector-class">.content</span>,</span><br><span class="line"><span class="selector-id">#l_side</span> <span class="selector-class">.webinfo-item</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: transparent <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">color</span>: inherit;</span><br><span class="line">  <span class="attribute">border</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#l_side</span> <span class="selector-tag">h2</span>,</span><br><span class="line"><span class="selector-id">#l_side</span> <span class="selector-class">.text</span> <span class="selector-tag">p</span>,</span><br><span class="line"><span class="selector-id">#l_side</span> <span class="selector-class">.webinfo-item</span> <span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#e0e0e0</span> <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#l_side</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#00ffff</span>;</span><br><span class="line">  <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#l_side</span> <span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#ff00ff</span>;</span><br><span class="line">  <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span> <span class="number">#ff00ff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="📖-正文样式"><a href="#📖-正文样式" class="headerlink" title="📖 正文样式"></a>📖 正文样式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">article</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#d0d0d0</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1.8</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">16px</span>;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&quot;Roboto Mono&quot;</span>, <span class="string">&quot;Fira Code&quot;</span>, monospace;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#l_main</span> &gt; <span class="selector-tag">section</span> &gt; <span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="number">#f0f0f0</span> <span class="meta">!important</span>;</span><br><span class="line">  <span class="attribute">text-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">1px</span> <span class="number">#00ffff</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="🔍开启暗黑模式"><a href="#🔍开启暗黑模式" class="headerlink" title="🔍开启暗黑模式"></a>🔍开启暗黑模式</h3><p>由于背景变为了黑色，文章标题的字体变得很难辨认，所以，需要在_config.yml中开启暗黑模式：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">darkmode:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="🖼-头像加载错误问题的排查过程"><a href="#🖼-头像加载错误问题的排查过程" class="headerlink" title="🖼 头像加载错误问题的排查过程"></a>🖼 头像加载错误问题的排查过程</h2><p>我遇到一个 bug：<strong>文章页面下方出现了默认作者头像和提示“请设置文章作者”</strong>，而我已经在 <code>_config.yml</code> 中配置了作者信息：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">meta_library:</span></span><br><span class="line">  <span class="attr">author:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">赛博鲸鱼</span></span><br><span class="line">    <span class="comment"># avatar: images/website/logo.png</span></span><br></pre></td></tr></table></figure>
+
+<p>排查过程如下：</p>
+<h3 id="❌-问题表现"><a href="#❌-问题表现" class="headerlink" title="❌ 问题表现"></a>❌ 问题表现</h3><ul>
+<li>页面 HTML 渲染出默认头像路径：<br><code>https://unpkg.com/volantis-static@.../apple-touch-icon.png</code></li>
+<li><code>&lt;p&gt;请设置文章作者&lt;/p&gt;</code> 被插入文章页底部</li>
 </ul>
+<h3 id="🔍-根因分析"><a href="#🔍-根因分析" class="headerlink" title="🔍 根因分析"></a>🔍 根因分析</h3><ul>
+<li><code>meta_library.author.avatar</code> 字段 <strong>被注释了</strong></li>
+<li>Volantis 渲染作者头像时未能获取路径，退回默认配置</li>
+</ul>
+<h3 id="✅-解决方案"><a href="#✅-解决方案" class="headerlink" title="✅ 解决方案"></a>✅ 解决方案</h3><p>取消注释或正确设置：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">meta_library:</span></span><br><span class="line">  <span class="attr">author:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">赛博鲸鱼</span></span><br><span class="line">    <span class="attr">avatar:</span> <span class="string">/images/website/avatar.png</span></span><br></pre></td></tr></table></figure>
+
+<p>或使用多人模式，在 <code>source/_data/author.yml</code> 中定义作者：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">赛博鲸鱼:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">赛博鲸鱼</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">/images/website/avatar.png</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/about/</span></span><br></pre></td></tr></table></figure>
+
+<p>并在文章 front-matter 中加：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">author:</span> <span class="string">赛博鲸鱼</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>最终，博客顺利恢复了头像显示，整体风格也呈现出我所期望的霓虹与深夜赛博感。</p>
 
         </div>
         
                 
+                    
+                        <div class='footer'>
+                            <!-- 参考资料、相关资料等 -->
+                            
+                                    <!-- 相关文章 -->
+                                    
+                                                <!-- 版权声明组件 -->
+                                                
+                                                                        <!-- 打赏组件 -->
+                                                                        
+                        </div>
+                        
                             
                                 
 
@@ -2629,10 +2708,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-06-18T15:54:03+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-06-24T11:27:30+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jun 18, 2025</p>
+    <p>更新于：Jun 24, 2025</p>
   </a>
 </div>
 
@@ -2640,6 +2719,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Hexo/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Hexo</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Volantis/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Volantis</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>博客美化</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CSS%E4%B8%BB%E9%A2%98/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>CSS主题</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Bug%E6%8E%92%E6%9F%A5/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Bug排查</p></a></div>
+  <span hidden itemprop="keywords">Hexo Volantis 博客美化 CSS主题 Bug排查</span>
+  
+
 
         
       
@@ -2651,7 +2737,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://tech.he0xwhale.xyz/friends/index.html&text=友链 - TECH whale"
+            target="_blank" href="https://t.me/share/url?url=https://tech.he0xwhale.xyz/2025/06/24/volantis_cyberpunk_style_avatar_bug/&text=Volantis 博客赛博朋克主题样式与头像加载问题的排查记录 - TECH whale"
           
           >
           
@@ -2665,7 +2751,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class='hoverbox'>
           <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC+klEQVR42u3aQRITMQwEwPz/03CnoNYaybAi7Vs2idduX6Ykf34Yvx0fBGDAgAEDBswamE84/jjxL9+nv39639PzdD9gwIABAwYMmH0wxwFo6PfdDacH8XgwYMCAAQMGDJi1MI8BaOj31YWfztNeHxgwYMCAAQPm62CqQXAqyI0fHBgwYMCAAQPma2FuN/DWBjwwYMCAAQMGzHWYcoOq+OLue243BMGAAQMGDBgw+2DiC8Mv/fzPb4aDAQMGDBgwYK7DdMcTWLdhd1rQGtsPGDBgwIABA2YNTBqQUrjq+6bne2zwgQEDBgwYMGDWw1QbYNVGXHcjabAsV/DAgAEDBgwYMK+HOQ5AzcZb9YJRdd7qRafHgAcGDBgwYMCAeS1MOlG3oDTVWJueHwwYMGDAgAGzD+ZTHNXANxUo03Udrw8MGDBgwIABsxYmfT71/1sFq2MwMGDAgAEDBswamOnglhbA0kBYDXzHAQ8MGDBgwIAB83qYtJE1teHq8/T74wMEAwYMGDBgwKyDSQNU2ug6DVzpAcYHCwYMGDBgwIBZB3O6gO7zNND9rQMBAwYMGDBgwOyBSRtr3Ys80w29LhAYMGDAgAEDZh9MN1BVG3DTG04DYlzBAwMGDBgwYMC8HqYKll4g6ga/6aAHBgwYMGDAgNkDEwehYbBuUJtqDIIBAwYMGDBg9sGkn28XpLoNwPJ8YMCAAQMGDJj1MKcFpmrjrdqg64KX5wMDBgwYMGDArIVJwdIGWzdIVgtl5YYbGDBgwIABA+a1MN0xViA6vdhTvFBULsSBAQMGDBgwYNbA3A5MUw21FP4UHAwYMGDAgAGzF2aqoNQNeLcPAgwYMGDAgAHz/8KkAaq6gO7FnzSgPh4QGDBgwIABA+brYNKNVANb9aJSuSEHBgwYMGDAgPk6mG5hKr1ANA0PBgwYMGDAgNkLU224dRtht99bLpyBAQMGDBgwYNbBdBtXU42x04tK7SB32nADAwYMGDBgwLwWxgADBgwYMGDALBs/AdHC5+E/gDYqAAAAAElFTkSuQmCC">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADq0lEQVR42u3awVLrQAwEwPz/T/Pur4qypBFEoXpvgdhetTkM0r6+rNF6IQAHDhw4Cxy4I3Cv4fr/+qfP3eu/+/5316X7KdcLDhw4cODAgQN3DK4cAB828t3300K34cb1ggMHDhw4cODAHYXrBtYqUHVj099XX2gc0MGBAwcOHDhw4P4IXLew7cZp9TngwIEDBw4cOHDgdgLrdoBNG53gwIEDBw4cOHCfDrfVeEwbm1OQ9MX+2iQfHDhw4MCBAwduCW6rsfgpn8f1ggMHDhw4cODAHYFLVzd4bjceq99fqxccOHDgwIEDB+4I3HRAvBUstw4EpgPz8v3BgQMHDhw4cOCOwHUL7w6ipxDTA4fpAcXHgA0OHDhw4MCBA3cEbquwaWBdD6jFQNz9wwAHDhw4cODAgbsGVx0cTwNrdzC8PbheH6yDAwcOHDhw4MAdgUsf0L1+2gjdAp8O1sGBAwcOHDhw4D4drhs8p4VMB+HT+5cbpeDAgQMHDhw4cMfg0uA4bUSmg+9ug3M66AYHDhw4cODAgbsK1w26aQNy+sK6+4kH0Ol/DuDAgQMHDhw4cD8Elz6w++Dpi+jeb3ugDQ4cOHDgwIEDdx3uK1zlwW4IsB24yy8OHDhw4MCBAwfuOFw6EE4PFG4PsLv3BwcOHDhw4MCB+xS4bnCsbmh6EHHrBaX1PTYywYEDBw4cOHDgjsFtB9RpsN5qRE730Q7A4MCBAwcOHDhwvwS3BbJVQNoITYNwOQCDAwcOHDhw4MAdgZsOqNMDhdvBNoV5vA84cODAgQMHDtwxuDRAThuj243LdCAdNzLBgQMHDhw4cODeBJceAOxuZArVvX4rkIMDBw4cOHDgwF2BS4Nqt/AucNrg7B4ofLweHDhw4MCBAwfuGNzWYLfb+JwWtt2IbR8sBAcOHDhw4MCBezNctfE3PYCYBt8UZut6cODAgQMHDhy4a3DpYHfaEOyubvAeNyqfIMGBAwcOHDhw4I7CTQvqBtatBuh6wH36DA4cOHDgwIEDdwQuPmg3DJQpXBqMu8EZHDhw4MCBAwfuKtzVhmI3SKcB+LF+cODAgQMHDhy4o3BpoJ1utPvcKvT2wBwcOHDgwIEDB+6vwHUblWlh6cA7/jk4cODAgQMHDtwfh0sPKnYPFqb1lAM8OHDgwIEDBw7cUbhpYWkwTQutPr96H3DgwIEDBw4cuE+BmzYQu4PrKXh1gP3jLw4cOHDgwIEDB+4InNVstCIABw4cOAscuPeuf3XKgJc2VuCwAAAAAElFTkSuQmCC">
           </div>
         </div>
       
@@ -2673,7 +2759,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://tech.he0xwhale.xyz/friends/index.html&title=友链 - TECH whale&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://tech.he0xwhale.xyz/2025/06/24/volantis_cyberpunk_style_avatar_bug/&title=Volantis 博客赛博朋克主题样式与头像加载问题的排查记录 - TECH whale&summary="
           
           >
           
@@ -2685,7 +2771,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://tech.he0xwhale.xyz/friends/index.html&title=友链 - TECH whale&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://tech.he0xwhale.xyz/2025/06/24/volantis_cyberpunk_style_avatar_bug/&title=Volantis 博客赛博朋克主题样式与头像加载问题的排查记录 - TECH whale&summary="
           
           >
           
@@ -2697,7 +2783,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://tech.he0xwhale.xyz/friends/index.html&title=友链 - TECH whale&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://tech.he0xwhale.xyz/2025/06/24/volantis_cyberpunk_style_avatar_bug/&title=Volantis 博客赛博朋克主题样式与头像加载问题的排查记录 - TECH whale&summary="
           
           >
           
@@ -2724,6 +2810,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                         
 
                                                             
+                                                                <div class="prev-next">
+                                                                    
+                                                                        <a class='prev' href='/2025/06/24/ubuntu_die/'>
+                                                                            <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+                                                                                Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战
+                                                                            </p>
+                                                                            <p class='content'>
+                                                                                Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战在日常使用 Ubuntu 桌面系统时，偶尔会遇到切换应用程序时系统彻底卡死的情况。特别是在操作大量文件、删除大文件夹时，系统响应迟缓，CP...
+                                                                            </p>
+                                                                        </a>
+                                                                        
+                                                                            
+                                                                </div>
+                                                                
                                                                     <!-- 文章推荐 -->
                                                                     
                                                                         
@@ -2733,6 +2833,23 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </article>
 
 
+    
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2025/06/24/volantis_cyberpunk_style_avatar_bug/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+        
 </div>
 <aside id='l_side' itemscope itemtype="https://schema.org/WPSideBar">
     
@@ -2761,7 +2878,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   <div class='content'>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5"><span class="toc-text">友情链接</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%8C%8C-%E5%8D%9A%E5%AE%A2%E6%95%B4%E4%BD%93%E9%A3%8E%E6%A0%BC%E8%AE%BE%E5%AE%9A%EF%BC%88%E8%B5%9B%E5%8D%9A%E6%9C%8B%E5%85%8B%EF%BC%89"><span class="toc-text">🌌 博客整体风格设定（赛博朋克）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%8E%A8-%E9%A1%B5%E9%9D%A2%E9%A2%9C%E8%89%B2%E4%B8%BB%E9%A2%98"><span class="toc-text">🎨 页面颜色主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%A7%8A-%E6%AF%9B%E7%8E%BB%E7%92%83%E4%B8%8E%E5%8D%A1%E7%89%87%E6%A0%B7%E5%BC%8F"><span class="toc-text">🧊 毛玻璃与卡片样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%A0-%E5%B0%81%E9%9D%A2%E6%A0%87%E9%A2%98%E4%B8%8E%E5%89%AF%E6%A0%87%E9%A2%98%EF%BC%88%E9%9C%93%E8%99%B9%E6%8F%8F%E8%BE%B9%EF%BC%89"><span class="toc-text">🔠 封面标题与副标题（霓虹描边）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%A7%AD-%E9%A1%B6%E6%A0%8F%E4%B8%8E%E4%BE%A7%E8%BE%B9%E6%A0%8F"><span class="toc-text">🧭 顶栏与侧边栏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%93%96-%E6%AD%A3%E6%96%87%E6%A0%B7%E5%BC%8F"><span class="toc-text">📖 正文样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%8D%E5%BC%80%E5%90%AF%E6%9A%97%E9%BB%91%E6%A8%A1%E5%BC%8F"><span class="toc-text">🔍开启暗黑模式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%F0%9F%96%BC-%E5%A4%B4%E5%83%8F%E5%8A%A0%E8%BD%BD%E9%94%99%E8%AF%AF%E9%97%AE%E9%A2%98%E7%9A%84%E6%8E%92%E6%9F%A5%E8%BF%87%E7%A8%8B"><span class="toc-text">🖼 头像加载错误问题的排查过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%9D%8C-%E9%97%AE%E9%A2%98%E8%A1%A8%E7%8E%B0"><span class="toc-text">❌ 问题表现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%F0%9F%94%8D-%E6%A0%B9%E5%9B%A0%E5%88%86%E6%9E%90"><span class="toc-text">🔍 根因分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%9C%85-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">✅ 解决方案</span></a></li></ol></li></ol>
   </div>
 </section>
 
@@ -3364,7 +3481,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},{"@context":"https://schema.org","@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","sameAs":["https://github.com/he0xwhale"],"description":"A blog dedicated to technology and Innovation"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tech.he0xwhale.xyz/","name":"TECH whale"}}]},{"@context":"https://schema.org","@type":"WebSite","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","keywords":"technology,innovation","description":"A blog dedicated to technology and Innovation","author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","description":"A blog dedicated to technology and Innovation"},"publisher":{"@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tech.he0xwhale.xyz?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org","@type":"BlogPosting","headline":"友链","description":"A blog dedicated to technology and Innovation","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://tech.he0xwhale.xyz/friends/index.html"},"author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz"},"publisher":{"@type":"Organization","name":"TECH whale","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"url":"https://tech.he0xwhale.xyz/friends/index.html","wordCount":0,"datePublished":"2025-06-18T07:54:03.728Z","dateModified":"2025-06-18T07:54:03.728Z","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},{"@context":"https://schema.org","@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","sameAs":["https://github.com/he0xwhale"],"description":"A blog dedicated to technology and Innovation"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tech.he0xwhale.xyz/","name":"TECH whale"}},{"@type":"ListItem","position":2,"item":{"@id":"https://tech.he0xwhale.xyz/categories/博客搭建/","name":"博客搭建"}},{"@type":"ListItem","position":3,"item":{"@id":"https://tech.he0xwhale.xyz/2025/06/24/volantis_cyberpunk_style_avatar_bug/","name":"Volantis 博客赛博朋克主题样式与头像加载问题的排查记录"}}]},{"@context":"https://schema.org","@type":"WebSite","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","keywords":"technology,innovation","description":"A blog dedicated to technology and Innovation","author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","description":"A blog dedicated to technology and Innovation"},"publisher":{"@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tech.he0xwhale.xyz?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org","@type":"BlogPosting","headline":"Volantis 博客赛博朋克主题样式与头像加载问题的排查记录","description":"A blog dedicated to technology and Innovation","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://tech.he0xwhale.xyz/2025/06/24/volantis_cyberpunk_style_avatar_bug/"},"author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz"},"publisher":{"@type":"Organization","name":"TECH whale","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"url":"https://tech.he0xwhale.xyz/2025/06/24/volantis_cyberpunk_style_avatar_bug/","wordCount":0,"datePublished":"2025-06-24T02:22:41.000Z","dateModified":"2025-06-24T03:27:30.809Z","articleSection":"博客搭建","keywords":"Hexo,Volantis,博客美化,CSS主题,Bug排查","image":{"@type":"ImageObject","url":"/images/cover/volantis_cyberpunk_style_avatar_bug.png","width":1024,"height":768}}]</script>
 
 
 

@@ -4,12 +4,22 @@
 
     <sitemap>
         <loc>https://tech.he0xwhale.xyz/post-sitemap.xml</loc>
-        <lastmod>2025-06-19T08:20:49.378Z</lastmod>
+        <lastmod>2025-06-24T07:14:53.391Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>https://tech.he0xwhale.xyz/page-sitemap.xml</loc>
         <lastmod>2025-06-18T08:23:09.142Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://tech.he0xwhale.xyz/category-sitemap.xml</loc>
+        <lastmod>2025-06-24T03:27:30.809Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://tech.he0xwhale.xyz/tag-sitemap.xml</loc>
+        <lastmod>2025-06-24T07:14:53.391Z</lastmod>
     </sitemap>
 
 </sitemapindex>

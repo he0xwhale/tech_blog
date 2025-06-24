@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <!-- SEO相关 -->
         
-            <link rel="canonical" href="https://tech.he0xwhale.xyz/2025/06/19/hello-world/"/>
+            <link rel="canonical" href="https://tech.he0xwhale.xyz/2025/06/24/ubuntu_die/"/>
                 <!-- 渲染优化 -->
                     <meta http-equiv='x-dns-prefetch-control' content='on' />
                         <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,21 +34,26 @@
                                                                             <!-- feed -->
                                                                                     <link rel="alternate" href="/atom.xml" title="TECH whale" type="application/atom+xml">
                                                                                                 <!-- 页面元数据 -->
-                                                                                                <title>Hello World - TECH whale</title>
-                                                                                                    <meta name="keywords" content="technology,innovation">
+                                                                                                <title>Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战 - TECH whale</title>
+                                                                                                    <meta name="keywords" content="Ubuntu ,Linux,系统卡顿,进程管理,文件删除,性能优化,technology,innovation">
                                                                                                         <meta desc name="description" content="A blog dedicated to technology and Innovation - he0xwhale - TECH whale">
                                                                                                             
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://tech.he0xwhale.xyz/2025/06/19/Hello-World/index.html">
+<meta property="og:title" content="Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战">
+<meta property="og:url" content="https://tech.he0xwhale.xyz/2025/06/24/ubuntu_die/index.html">
 <meta property="og:site_name" content="TECH whale">
-<meta property="og:description" content="A blog dedicated to technology and Innovation">
+<meta property="og:description" content="Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战在日常使用 Ubuntu 桌面系统时，偶尔会遇到切换应用程序时系统彻底卡死的情况。特别是在操作大量文件、删除大文件夹时，系统响应迟缓，CPU 占用飙升，图形界面几乎失效，令人十分头疼。本文结合实战经验，分享在系统卡顿时的应急处理步骤以及如何高效删除包含大量小文件的大文件夹，帮助你快速恢复系统并避免类似问题再次发生。  一、系统卡顿时如何紧急应">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://tech.he0xwhale.xyz/images/seo/og_seo.png">
-<meta property="article:published_time" content="2025-06-19T08:20:49.000Z">
-<meta property="article:modified_time" content="2025-06-19T08:20:49.378Z">
+<meta property="article:published_time" content="2025-06-24T02:30:41.000Z">
+<meta property="article:modified_time" content="2025-06-24T07:14:53.391Z">
 <meta property="article:author" content="he0xwhale">
-<meta property="article:tag" content="technology,innovation">
+<meta property="article:tag" content="Ubuntu ">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="系统卡顿">
+<meta property="article:tag" content="进程管理">
+<meta property="article:tag" content="文件删除">
+<meta property="article:tag" content="性能优化">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://tech.he0xwhale.xyz/images/seo/og_seo.png">
                                                                                                                 <style>
@@ -718,6 +723,163 @@ button {
   -webkit-opacity: 1;
   -moz-opacity: 1;
   border-bottom: 2px solid var(--color-site-inner);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+  :root:not([color-scheme]) {
+    --color-site-body: #121212;
+    --color-read-bkg: #1f1f1f;
+    --color-read-post: #262626;
+    --color-site-bg: #1f1f1f;
+    --color-site-inner: rgba(238,238,238,0.871);
+    --color-site-footer: rgba(170,170,170,0.871);
+    --color-card: #262626;
+    --color-text: rgba(238,238,238,0.871);
+    --color-block: #434343;
+    --color-codeblock: #1f1f1f;
+    --color-inlinecode: #d56d28;
+    --color-h1: rgba(255,255,255,0.871);
+    --color-h2: rgba(255,255,255,0.871);
+    --color-h3: rgba(255,255,255,0.6);
+    --color-h4: rgba(255,255,255,0.6);
+    --color-h5: rgba(255,255,255,0.6);
+    --color-h6: rgba(255,255,255,0.6);
+    --color-p: rgba(217,217,217,0.871);
+    --color-list: rgba(217,217,217,0.871);
+    --color-list-hl: #63e0c4;
+    --color-meta: rgba(191,191,191,0.871);
+    --color-link: rgba(191,191,191,0.871);
+    --color-copyright-bkg: #21252b;
+    --link-color: #e4e4e4;
+  }
+  :root:not([color-scheme]) img {
+    filter: brightness(70%) !important;
+  }
+  :root:not([color-scheme]) .blur {
+    background: rgba(31,31,31,0.9) !important;
+  }
+  :root:not([color-scheme]) .white-box.blur {
+    background: rgba(38,38,38,0.9) !important;
+  }
+  :root:not([color-scheme]) .nav-main .u-search-input {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) #l_main .article .prev-next>a:hover {
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) .article blockquote {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .article-title a {
+    color: var(--color-h1) !important;
+  }
+  :root:not([color-scheme]) details>summary {
+    color: var(--color-p) !important;
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) details {
+    border: 1px solid var(--color-site-bg) !important;
+    background: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal,
+  :root:not([color-scheme]) #u-search .modal-header,
+  :root:not([color-scheme]) #u-search .modal-body {
+    background: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) #u-search .modal-body .modal-results .result:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:hover {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .u-search-input:focus {
+    background: var(--color-site-body) !important;
+  }
+}
+[color-scheme='dark'] {
+  --color-site-body: #121212;
+  --color-read-bkg: #1f1f1f;
+  --color-read-post: #262626;
+  --color-site-bg: #1f1f1f;
+  --color-site-inner: rgba(238,238,238,0.871);
+  --color-site-footer: rgba(170,170,170,0.871);
+  --color-card: #262626;
+  --color-text: rgba(238,238,238,0.871);
+  --color-block: #434343;
+  --color-codeblock: #1f1f1f;
+  --color-inlinecode: #d56d28;
+  --color-h1: rgba(255,255,255,0.871);
+  --color-h2: rgba(255,255,255,0.871);
+  --color-h3: rgba(255,255,255,0.6);
+  --color-h4: rgba(255,255,255,0.6);
+  --color-h5: rgba(255,255,255,0.6);
+  --color-h6: rgba(255,255,255,0.6);
+  --color-p: rgba(217,217,217,0.871);
+  --color-list: rgba(217,217,217,0.871);
+  --color-list-hl: #63e0c4;
+  --color-meta: rgba(191,191,191,0.871);
+  --color-link: rgba(191,191,191,0.871);
+  --color-copyright-bkg: #21252b;
+  --link-color: #e4e4e4;
+}
+[color-scheme='dark'] img {
+  filter: brightness(70%) !important;
+}
+[color-scheme='dark'] .blur {
+  background: rgba(31,31,31,0.9) !important;
+}
+[color-scheme='dark'] .white-box.blur {
+  background: rgba(38,38,38,0.9) !important;
+}
+[color-scheme='dark'] .nav-main .u-search-input {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] #l_main .article .prev-next>a:hover {
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] .article blockquote {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .article-title a {
+  color: var(--color-h1) !important;
+}
+[color-scheme='dark'] details>summary {
+  color: var(--color-p) !important;
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] details {
+  border: 1px solid var(--color-site-bg) !important;
+  background: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] #u-search .modal,
+[color-scheme='dark'] #u-search .modal-header,
+[color-scheme='dark'] #u-search .modal-body {
+  background: var(--color-card) !important;
+}
+[color-scheme='dark'] #u-search .modal-body .modal-results .result:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:hover {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .u-search-input:focus {
+  background: var(--color-site-body) !important;
+}
+@media screen and (max-width: 500px) {
+  [color-scheme='dark'] .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
+[color-scheme='dark'] .friend-card.color-bk-dark {
+  filter: brightness(0.8);
 }
 @font-face {
   font-family: 'UbuntuMono';
@@ -1555,10 +1717,21 @@ ul.list-v >li>a:hover {
     padding: 0px;
   }
 }
+@media screen and (prefers-color-scheme: dark) and (max-width: 500px) {
+  .l_header .m_search {
+    background: var(--color-site-bg) !important;
+  }
+}
 
                                                                                                                 </style>
                                                                                                                 <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
                                                                                                                 <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+                                                                                                                    <script>
+                                                                                                                        let userColorScheme = localStorage.getItem("color-scheme")
+                                                                                                                        if (userColorScheme) {
+                                                                                                                            document.documentElement.setAttribute("color-scheme", userColorScheme);
+                                                                                                                        }
+                                                                                                                    </script>
                                                                                                                         
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1999,7 +2172,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1750663895174),
+    lastupdate: new Date(1750749560402),
     cdn: {
       izitoast_css: 'https://unpkg.com/izitoast@1.4.0/dist/css/iziToast.min.css',
       izitoast_js: 'https://unpkg.com/izitoast@1.4.0/dist/js/iziToast.min.js',
@@ -2360,7 +2533,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                                         
 <div id="l_main" class=''>
   <article itemscope itemtype="https://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-    <link itemprop="mainEntityOfPage" href="https://tech.he0xwhale.xyz/2025/06/19/Hello-World/">
+    <link itemprop="mainEntityOfPage" href="https://tech.he0xwhale.xyz/2025/06/24/ubuntu_die/">
     <span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="TECH whale">
   </span>
@@ -2372,16 +2545,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   
-    <span hidden>
-      <meta itemprop="image" content="/images/seo/logo_seo.png">
-    </span>
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img itemprop="image" class='headimg' src='/images/cover/ubuntu_die.png'/>
+      </a>
+    </div>
   
   <div class="article-meta" id="top">
     
     
     
       <h1 class="title" itemprop="name headline">
-        Hello World
+        Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战
       </h1>
       <div class='new-meta-box'>
         
@@ -2389,7 +2564,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
     <div class='new-meta-item author' itemprop="author" itemscope itemtype="https://schema.org/Person">
         <a itemprop="url" class='author' href="/" rel="nofollow">
-    " class="lazyload" data-srcset="" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==<img itemprop="image" src="">
+    <img itemprop="image" src="images/website/logo.png" class="lazyload" data-srcset="images/website/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     <p itemprop="name">he0xwhale</p>
   </a>
     </div>
@@ -2400,10 +2575,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-06-19T16:20:49+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-06-24T10:30:41+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jun 19, 2025</p>
+    <p>发布于：Jun 24, 2025</p>
   </a>
 </div>
 
@@ -2414,13 +2589,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>0 words</p>
+      <p>889 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>1 min</p>
+      <p>3 min</p>
     </a>
   </div>
 
@@ -2458,7 +2633,70 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
         <div id="layoutHelper-page-plugins"></div>
         <div id="post-body" itemprop="articleBody">
-            
+            <h1 id="Ubuntu-系统卡顿时的应急处理与大文件夹删除优化实战"><a href="#Ubuntu-系统卡顿时的应急处理与大文件夹删除优化实战" class="headerlink" title="Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战"></a>Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战</h1><p>在日常使用 Ubuntu 桌面系统时，偶尔会遇到切换应用程序时系统彻底卡死的情况。特别是在操作大量文件、删除大文件夹时，系统响应迟缓，CPU 占用飙升，图形界面几乎失效，令人十分头疼。本文结合实战经验，分享在系统卡顿时的应急处理步骤以及如何高效删除包含大量小文件的大文件夹，帮助你快速恢复系统并避免类似问题再次发生。</p>
+<hr>
+<h2 id="一、系统卡顿时如何紧急应对？"><a href="#一、系统卡顿时如何紧急应对？" class="headerlink" title="一、系统卡顿时如何紧急应对？"></a>一、系统卡顿时如何紧急应对？</h2><h3 id="1-切换到虚拟终端"><a href="#1-切换到虚拟终端" class="headerlink" title="1. 切换到虚拟终端"></a>1. 切换到虚拟终端</h3><p>当桌面环境卡死时，可以使用快捷键 <code>Ctrl + Alt + F4</code>（或 F1~F6）切换到命令行终端（TTY）。登录后可以通过命令行操作来诊断和处理问题。</p>
+<h3 id="2-重启图形界面"><a href="#2-重启图形界面" class="headerlink" title="2. 重启图形界面"></a>2. 重启图形界面</h3><p>找出你使用的图形显示管理器（Display Manager），常见的有：</p>
+<ul>
+<li>GDM（GNOME）</li>
+<li>SDDM（KDE）</li>
+<li>LightDM（XFCE、MATE）</li>
+</ul>
+<p>用如下命令之一重启图形界面：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl restart gdm</span><br><span class="line"><span class="built_in">sudo</span> systemctl restart sddm</span><br><span class="line"><span class="built_in">sudo</span> systemctl restart lightdm</span><br><span class="line">````</span><br><span class="line"></span><br><span class="line">这会退出当前图形会话，重新加载桌面环境。</span><br><span class="line"></span><br><span class="line"><span class="comment">### 3. 终止占用过高的进程</span></span><br><span class="line"></span><br><span class="line">使用 `top` 或 `htop` 查看 CPU 使用情况，找到占用 CPU 最高的进程，执行：</span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line"><span class="built_in">sudo</span> <span class="built_in">kill</span> -9 &lt;PID&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例如，当 Chrome 浏览器占用过高时，可以执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> killall chrome chromium chromium-browser</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="二、删除包含大量小文件的大文件夹导致系统卡顿的根本原因"><a href="#二、删除包含大量小文件的大文件夹导致系统卡顿的根本原因" class="headerlink" title="二、删除包含大量小文件的大文件夹导致系统卡顿的根本原因"></a>二、删除包含大量小文件的大文件夹导致系统卡顿的根本原因</h2><p>在删除大量小文件的文件夹时，系统会进行频繁的磁盘元数据操作，Nautilus（Ubuntu 默认文件管理器）和 <code>gvfsd-metadata</code> 进程会不断刷新文件视图和元数据，导致：</p>
+<ul>
+<li><code>nautilus</code> CPU 使用率飙升</li>
+<li><code>gvfsd-metadata</code> 占用大量资源</li>
+<li>Xorg 进程负载飙升，图形界面响应迟缓</li>
+</ul>
+<hr>
+<h2 id="三、高效删除大量小文件的推荐方法"><a href="#三、高效删除大量小文件的推荐方法" class="headerlink" title="三、高效删除大量小文件的推荐方法"></a>三、高效删除大量小文件的推荐方法</h2><h3 id="1-终止-GUI-文件管理器进程"><a href="#1-终止-GUI-文件管理器进程" class="headerlink" title="1. 终止 GUI 文件管理器进程"></a>1. 终止 GUI 文件管理器进程</h3><p>为了避免 GUI 操作拖慢系统，先终止相关进程：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> killall nautilus gvfsd-metadata</span><br></pre></td></tr></table></figure>
+
+<p>这只是停止它们，不会影响文件本身。</p>
+<h3 id="2-使用命令行删除文件夹"><a href="#2-使用命令行删除文件夹" class="headerlink" title="2. 使用命令行删除文件夹"></a>2. 使用命令行删除文件夹</h3><p>进入目标目录，执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">rm</span> -rf /path/to/large-folder/*</span><br></pre></td></tr></table></figure>
+
+<p>对于极大量小文件，推荐使用 <code>find</code> 命令逐步删除：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find /path/to/large-folder -<span class="built_in">type</span> f -delete</span><br><span class="line">find /path/to/large-folder -<span class="built_in">type</span> d -empty -delete</span><br></pre></td></tr></table></figure>
+
+<p>或者用 <code>rsync</code> 快速同步空目录覆盖：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ~/empty_dir</span><br><span class="line">rsync -a --delete ~/empty_dir/ /path/to/large-folder/</span><br></pre></td></tr></table></figure>
+
+<p>这样效率更高，不会让 GUI 卡死。</p>
+<hr>
+<h2 id="四、卡死状态下系统恢复的实战技巧"><a href="#四、卡死状态下系统恢复的实战技巧" class="headerlink" title="四、卡死状态下系统恢复的实战技巧"></a>四、卡死状态下系统恢复的实战技巧</h2><p>当系统因 Chrome 和 Xorg 高负载卡死：</p>
+<ol>
+<li>在 TTY 终端执行：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> killall chrome chromium chromium-browser</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>重启图形界面：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> systemctl restart gdm</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>如果无响应，强制重启系统：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> reboot -f</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="五、后续预防建议"><a href="#五、后续预防建议" class="headerlink" title="五、后续预防建议"></a>五、后续预防建议</h2><ul>
+<li>避免用 GUI 删除含大量小文件的目录，改用命令行。</li>
+<li>控制 Chrome 标签数量，安装节流扩展减少资源占用。</li>
+<li>关闭 Nautilus 的“缩略图预览”和“最近文件”功能，减少后台负载。</li>
+<li>定期使用 <code>htop</code> 监控系统状态，及时发现高负载进程。</li>
+</ul>
+<hr>
+<h2 id="六、总结"><a href="#六、总结" class="headerlink" title="六、总结"></a>六、总结</h2><p>Ubuntu 系统在删除大量小文件夹或运行高负载应用时可能导致卡死，但只要掌握切换 TTY、杀死高占用进程、重启图形界面和使用命令行高效删除文件的技巧，就能快速恢复系统并提高工作效率。希望这篇实战指南能帮助你轻松应对类似问题。</p>
+
         </div>
         
                 
@@ -2482,10 +2720,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-06-19T16:20:49+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-06-24T15:14:53+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jun 19, 2025</p>
+    <p>更新于：Jun 24, 2025</p>
   </a>
 </div>
 
@@ -2493,6 +2731,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Ubuntu/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Ubuntu </p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%B3%BB%E7%BB%9F%E5%8D%A1%E9%A1%BF/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>系统卡顿</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>进程管理</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%96%87%E4%BB%B6%E5%88%A0%E9%99%A4/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>文件删除</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>性能优化</p></a></div>
+  <span hidden itemprop="keywords">Ubuntu  Linux 系统卡顿 进程管理 文件删除 性能优化</span>
+  
+
 
         
       
@@ -2504,7 +2749,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://tech.he0xwhale.xyz/2025/06/19/Hello-World/&text=Hello World - TECH whale"
+            target="_blank" href="https://t.me/share/url?url=https://tech.he0xwhale.xyz/2025/06/24/ubuntu_die/&text=Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战 - TECH whale"
           
           >
           
@@ -2518,7 +2763,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class='hoverbox'>
           <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC/UlEQVR42u3aQVLEMAwEwP3/p+EBQNkaaSEq2jeoTWK3L6qRXh/Wt+uFAAwYMGDAgFkD8wrXT89/+dAP/z99//S76vuuzwMGDBgwYMCAWQdzXQANw6QHPO0nPg8YMGDAgAEDZi1MupEU7Pb7twDt84ABAwYMGDBg/g1Mt9CqAoEBAwYMGDBgwLy7wJuGuA3AwIABAwYMGDD/F6baoJoqyLqwj+tEggEDBgwYMGB+DSYeGH7o3/F5wIABAwYMGDBrYKZXF/avFxgwYMCAAQNmD0w1eLptjKWBURpYjTXgwIABAwYMGDBrYKovenejrTpYdDtgdA0JBgwYMGDAgFkPU93g1MGnCrv04sCAAQMGDBgw+2C6A0JpwVgNqKqFZzVAAwMGDBgwYMDsgZkaIE4DrWqB2G2oHQtNMGDAgAEDBsw6mGqBdV0whY26bgOt2jgEAwYMGDBgwOyHSYOlNGjqFmrVizo+DwYMGDBgwIBZA9NtYKUH7z6XNgTbg0NgwIABAwYMmMfBdBtkU4FS2nBLG4HHAg8MGDBgwIAB81iYqULsdKBqA6x7EWkABgYMGDBgwIDZA9MNeqqFVnXDU6DX7wcDBgwYMGDArIWpBkTdgi8dGJoq6MqDQ2DAgAEDBgyYx8FcBznN4Kh7IdWCs/w7MGDAgAEDBswamO5gTzfImirsuhcEBgwYMGDAgNkLM1U4pQe/Bak20MqDRmDAgAEDBgyY9TAp3LsGj9KCrRycgQEDBgwYMGDWwaQbSzeeDihVQcuAYMCAAQMGDJg1MN01HVSVg6Ui7DEQAwMGDBgwYMCsgXmFazo4miok04YgGDBgwIABA2YvTLegSzeWDhClgdjx+2DAgAEDBgyYtTDVQOn2ANXnq/urNtzAgAEDBgwYMGDSgZ0UtBtY/XqBBwYMGDBgwIB5LMzUQacbfnEjDwwYMGDAgAGzFqbacJsOptJ9dS8EDBgwYMCAAbMXZqrA6jbopgaIqsEZGDBgwIABA2YfjAUGDBgwYMCAWbY+AZ4GY6wMoBmqAAAAAElFTkSuQmCC">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC8UlEQVR42u3aO3LDMAwFQN3/0knvxEPiQ41gLzsnpkyumjcArh/r33UhAAMGDBgwYMbAXMn154Evf3/3/Xf7V+dZ/V7XfcCAAQMGDBgw82C2A9Dhi0V/Pwq/fB4YMGDAgAEDZizMMgBtfn+1f/cC3UFzeR8wYMCAAQMGDJjkBaKFKDBgwIABAwYMmCrMqUJWufAEBgwYMGDAgPkamGrDKwrQ1eh7XCcSDBgwYMCAAXMbTHpg+KGf2wagwYABAwYMGDCPhamuaKEqGsi6AuL2ecCAAQMGDBgwY2C6BoF291cLWqcGmcCAAQMGDBgw82CyF9o9cBVoVSDL/n27UAUGDBgwYMCAeTzMbuCqBrxdoOh5os8LV/DAgAEDBgwYMI+HqTa6dg/Ytb+9EAYGDBgwYMCAGQPTVQCqDgJlG3pVODBgwIABAwbMXJiuC1aDYLbhlg2C4U4kGDBgwIABA+axMNGDZ/efDoZlQDBgwIABAwbMGJiuglE2sFWDXnshDQwYMGDAgAEzFiY72JOFjgazUw08MGDAgAEDBsw8mO6DVgd8qgNM2eAIBgwYMGDAgJkHEy3wdAW16ODR6RcDBgwYMGDAgJkHswtRvXA02GWfeyUXGDBgwIABA+ZzYaKNrOjKFrSqLxYMGDBgwIABMxcmCnK6wBUNcl2BFAwYMGDAgAHzOTDRRla0QXZ3o28bCgwYMGDAgAEzFubUYE82IGZf4O4L2Q54YMCAAQMGDJgxMNkCUPXA1QGi8uASGDBgwIABA2YMTNfAT/sBk423KDgYMGDAgAEDZi5M18WiB+kC6mq0gQEDBgwYMGDmwpwqKFUHirpe1HbQBAMGDBgwYMCMhckGqO7BoFOFsuU5wIABAwYMGDBfC5NtiGULWl2FLzBgwIABAwYMmK4Ln3r+MjCCAQMGDBgwYMbCRBtu1eBWDXDRAthtg0NgwIABAwYMmNtgqo2r6P+j+6KDQNHPYMCAAQMGDJh5MBYYMGDAgAEDZtj6BQI/Y6zjDdpgAAAAAElFTkSuQmCC">
           </div>
         </div>
       
@@ -2526,7 +2771,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://tech.he0xwhale.xyz/2025/06/19/Hello-World/&title=Hello World - TECH whale&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://tech.he0xwhale.xyz/2025/06/24/ubuntu_die/&title=Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战 - TECH whale&summary="
           
           >
           
@@ -2538,7 +2783,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://tech.he0xwhale.xyz/2025/06/19/Hello-World/&title=Hello World - TECH whale&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://tech.he0xwhale.xyz/2025/06/24/ubuntu_die/&title=Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战 - TECH whale&summary="
           
           >
           
@@ -2550,7 +2795,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://tech.he0xwhale.xyz/2025/06/19/Hello-World/&title=Hello World - TECH whale&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://tech.he0xwhale.xyz/2025/06/24/ubuntu_die/&title=Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战 - TECH whale&summary="
           
           >
           
@@ -2577,6 +2822,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                         
 
                                                             
+                                                                <div class="prev-next">
+                                                                    
+                                                                            
+                                                                                <a class='next' href='/2025/06/24/volantis_cyberpunk_style_avatar_bug/'>
+                                                                                    <p class='title'>
+                                                                                        Volantis 博客赛博朋克主题样式与头像加载问题的排查记录<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+                                                                                    <p class='content'>
+                                                                                        本文记录了我在使用 Hexo + Volantis 主题搭建赛博朋克风格博客过程中，进行样式自定义和头像加载问题排查的过程。
+🌌 博客整体风格设定（赛博朋克）我为博客配置了一套基于深蓝紫夜色 ...
+                                                                                    </p>
+                                                                                </a>
+                                                                                
+                                                                </div>
+                                                                
                                                                     <!-- 文章推荐 -->
                                                                     
                                                                         
@@ -2591,7 +2850,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2025/06/19/Hello-World/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2025/06/24/ubuntu_die/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2620,6 +2879,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
 
+
+<section class="widget toc-wrapper desktop mobile" id="toc-div" >
+  
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%B3%BB%E7%BB%9F%E5%8D%A1%E9%A1%BF%E6%97%B6%E5%A6%82%E4%BD%95%E7%B4%A7%E6%80%A5%E5%BA%94%E5%AF%B9%EF%BC%9F"><span class="toc-text">一、系统卡顿时如何紧急应对？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%87%E6%8D%A2%E5%88%B0%E8%99%9A%E6%8B%9F%E7%BB%88%E7%AB%AF"><span class="toc-text">1. 切换到虚拟终端</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%87%8D%E5%90%AF%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2"><span class="toc-text">2. 重启图形界面</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%88%A0%E9%99%A4%E5%8C%85%E5%90%AB%E5%A4%A7%E9%87%8F%E5%B0%8F%E6%96%87%E4%BB%B6%E7%9A%84%E5%A4%A7%E6%96%87%E4%BB%B6%E5%A4%B9%E5%AF%BC%E8%87%B4%E7%B3%BB%E7%BB%9F%E5%8D%A1%E9%A1%BF%E7%9A%84%E6%A0%B9%E6%9C%AC%E5%8E%9F%E5%9B%A0"><span class="toc-text">二、删除包含大量小文件的大文件夹导致系统卡顿的根本原因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%AB%98%E6%95%88%E5%88%A0%E9%99%A4%E5%A4%A7%E9%87%8F%E5%B0%8F%E6%96%87%E4%BB%B6%E7%9A%84%E6%8E%A8%E8%8D%90%E6%96%B9%E6%B3%95"><span class="toc-text">三、高效删除大量小文件的推荐方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BB%88%E6%AD%A2-GUI-%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E5%99%A8%E8%BF%9B%E7%A8%8B"><span class="toc-text">1. 终止 GUI 文件管理器进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%A4%B9"><span class="toc-text">2. 使用命令行删除文件夹</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%8D%A1%E6%AD%BB%E7%8A%B6%E6%80%81%E4%B8%8B%E7%B3%BB%E7%BB%9F%E6%81%A2%E5%A4%8D%E7%9A%84%E5%AE%9E%E6%88%98%E6%8A%80%E5%B7%A7"><span class="toc-text">四、卡死状态下系统恢复的实战技巧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%90%8E%E7%BB%AD%E9%A2%84%E9%98%B2%E5%BB%BA%E8%AE%AE"><span class="toc-text">五、后续预防建议</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-text">六、总结</span></a></li></ol>
+  </div>
+</section>
 
   
 
@@ -2711,6 +2984,121 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 <!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
+
+  <script>
+const rootElement = document.documentElement;
+const darkModeStorageKey = "color-scheme";
+const rootElementDarkModeAttributeName = "color-scheme";
+const setLS = (k, v) => {
+    localStorage.setItem(k, v);
+};
+const removeLS = (k) => {
+    localStorage.removeItem(k);
+};
+const getLS = (k) => {
+    return localStorage.getItem(k);
+};
+const getModeFromCSSMediaQuery = () => {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+};
+const resetRootDarkModeAttributeAndLS = () => {
+  rootElement.removeAttribute(rootElementDarkModeAttributeName);
+  removeLS(darkModeStorageKey);
+};
+const validColorModeKeys = {
+  dark: true,
+  light: true,
+};
+const applyCustomDarkModeSettings = (mode) => {
+  const currentSetting = mode || getLS(darkModeStorageKey);
+  getCustomDarkMode();
+  if (currentSetting === getModeFromCSSMediaQuery()) {
+    resetRootDarkModeAttributeAndLS();
+  } else if (validColorModeKeys[currentSetting]) {
+    rootElement.setAttribute(rootElementDarkModeAttributeName, currentSetting);
+  } else {
+    resetRootDarkModeAttributeAndLS();
+  }
+};
+const invertDarkModeObj = {
+  dark: "light",
+  light: "dark",
+};
+/**
+ * get target mode
+ */
+ const getCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  if(currentSetting=="dark"){
+    volantis.dark.mode="light";
+  }else{
+    volantis.dark.mode="dark";
+  }
+  // console.log(volantis.dark.mode)
+};
+const toggleCustomDarkMode = () => {
+  let currentSetting = getLS(darkModeStorageKey);
+  if (validColorModeKeys[currentSetting]) {
+    currentSetting = invertDarkModeObj[currentSetting];
+  } else if (currentSetting === null) {
+    currentSetting = invertDarkModeObj[getModeFromCSSMediaQuery()];
+  } else {
+    return;
+  }
+  setLS(darkModeStorageKey, currentSetting);
+  return currentSetting;
+};
+/**
+ * 暗黑模式触发器
+ */
+volantis.dark.toggle=()=>{
+  const mode = toggleCustomDarkMode();
+  applyCustomDarkModeSettings(mode);
+  // 使用 volantis.dark.push 方法传入volantis.dark.toggle回调函数 参见layout/_partial/scripts/global.ejs
+  volantis.dark.method.toggle.start();
+}
+/**
+ * bind event for toggle button
+ */
+
+function bindToggleButton() {
+  var btn= document.querySelectorAll("#wrapper .toggle-mode-btn,#rightmenu-wrapper .toggle-mode-btn")
+  btn.forEach(function (e) {
+    volantis.dom.$(e).on('click',volantis.dark.toggle);
+  })
+}
+applyCustomDarkModeSettings();
+document.addEventListener("DOMContentLoaded", ()=>{
+  volantis.requestAnimationFrame(bindToggleButton)
+});
+
+const darkModelListeners={
+  dark:(mediaQueryList )=>{
+    if(mediaQueryList.matches){
+      volantis.dark.mode = "dark";
+    }
+    volantis.dark.method.toggle.start();
+  },
+  light:(mediaQueryList)=>{
+    if(mediaQueryList.matches){
+      volantis.dark.mode = "light";
+    }
+    volantis.dark.method.toggle.start();
+  }
+}
+window.matchMedia('(prefers-color-scheme: dark)').addListener(darkModelListeners.dark)
+window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListeners.light)
+</script>
+
 
 
 
@@ -3105,7 +3493,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},{"@context":"https://schema.org","@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","sameAs":["https://github.com/he0xwhale"],"description":"A blog dedicated to technology and Innovation"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tech.he0xwhale.xyz/","name":"TECH whale"}},{"@type":"ListItem","position":3,"item":{"@id":"https://tech.he0xwhale.xyz/2025/06/19/Hello-World/","name":"Hello World"}}]},{"@context":"https://schema.org","@type":"WebSite","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","keywords":"technology,innovation","description":"A blog dedicated to technology and Innovation","author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","description":"A blog dedicated to technology and Innovation"},"publisher":{"@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tech.he0xwhale.xyz?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org","@type":"BlogPosting","headline":"Hello World","description":"A blog dedicated to technology and Innovation","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://tech.he0xwhale.xyz/2025/06/19/Hello-World/"},"author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz"},"publisher":{"@type":"Organization","name":"TECH whale","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"url":"https://tech.he0xwhale.xyz/2025/06/19/Hello-World/","wordCount":0,"datePublished":"2025-06-19T08:20:49.000Z","dateModified":"2025-06-19T08:20:49.378Z","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},{"@context":"https://schema.org","@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","sameAs":["https://github.com/he0xwhale"],"description":"A blog dedicated to technology and Innovation"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tech.he0xwhale.xyz/","name":"TECH whale"}},{"@type":"ListItem","position":3,"item":{"@id":"https://tech.he0xwhale.xyz/2025/06/24/ubuntu_die/","name":"Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战"}}]},{"@context":"https://schema.org","@type":"WebSite","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","keywords":"technology,innovation","description":"A blog dedicated to technology and Innovation","author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","description":"A blog dedicated to technology and Innovation"},"publisher":{"@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tech.he0xwhale.xyz?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org","@type":"BlogPosting","headline":"Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战","description":"A blog dedicated to technology and Innovation","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://tech.he0xwhale.xyz/2025/06/24/ubuntu_die/"},"author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz"},"publisher":{"@type":"Organization","name":"TECH whale","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"url":"https://tech.he0xwhale.xyz/2025/06/24/ubuntu_die/","wordCount":0,"datePublished":"2025-06-24T02:30:41.000Z","dateModified":"2025-06-24T07:14:53.391Z","keywords":"Ubuntu ,Linux,系统卡顿,进程管理,文件删除,性能优化","image":{"@type":"ImageObject","url":"/images/cover/ubuntu_die.png","width":1024,"height":768}}]</script>
 
 
 

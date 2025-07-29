@@ -6,7 +6,7 @@
   <link href="https://tech.he0xwhale.xyz/atom.xml" rel="self"/>
   
   <link href="https://tech.he0xwhale.xyz/"/>
-  <updated>2025-06-24T07:14:53.391Z</updated>
+  <updated>2025-07-29T09:20:23.256Z</updated>
   <id>https://tech.he0xwhale.xyz/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录</title>
+    <link href="https://tech.he0xwhale.xyz/2025/07/29/ssh_proxyjump_debug/"/>
+    <id>https://tech.he0xwhale.xyz/2025/07/29/ssh_proxyjump_debug/</id>
+    <published>2025-07-29T08:40:00.000Z</published>
+    <updated>2025-07-29T09:20:23.256Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="利用-ProxyJump-和-SSHFS-实现主机间免密访问：一次完整的排错记录"><a href="#利用-ProxyJump-和-SSHFS-实现主机间免密访问：一次完整的排错记录" class="headerlink" title="利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录"></a>利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录</h2><p>在一次内部网络文件共享需求中，我需要让 C 主机（Ubuntu）可以像本地访问一样访问 A 主机（某linux系统）上的文件。整个网络结构如下：</p><ul><li>A 主机通过有线连接局域网 X</li><li>B 主机（Windows 7,使用了Bitvise作为ssh服务端和客户端）作为跳板机，拥有两张网卡：<ul><li>有线连接局域网 X，与 A 主机互通</li><li>无线连接局域网 Y，与 C 主机互通</li></ul></li><li>C 主机通过无线连接局域网 Y</li></ul><p>最终目标：<strong>C 主机可以通过文件管理器或终端免密访问 A 主机的共享目录。</strong></p><hr><h3 id="初步思路与尝试"><a href="#初步思路与尝试" class="headerlink" title="初步思路与尝试"></a>初步思路与尝试</h3><ol><li><p><strong>尝试通过 SSHFS 挂载远程目录</strong>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sshfs A-via-B:/home/yourAUser ~/mnt/a-via-b</span><br></pre></td></tr></table></figure><p>该命令依赖于 <code>.ssh/config</code> 中定义的 ProxyJump：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Host B</span><br><span class="line">    HostName B_HOST_IP</span><br><span class="line">    User yourBUser</span><br><span class="line">    IdentityFile ~/.ssh/id_ed25519</span><br><span class="line">    IdentitiesOnly yes</span><br><span class="line"></span><br><span class="line">Host A-via-B</span><br><span class="line">    HostName A_HOST_IP</span><br><span class="line">    User yourAUser</span><br><span class="line">    ProxyJump B  </span><br><span class="line">    IdentityFile ~/.ssh/id_ed25519</span><br><span class="line">    IdentitiesOnly yes</span><br></pre></td></tr></table></figure></li><li><p>初始连接测试成功，但每次挂载都要输入密码。</p></li></ol><hr><h3 id="为实现免密登录所做的尝试"><a href="#为实现免密登录所做的尝试" class="headerlink" title="为实现免密登录所做的尝试"></a>为实现免密登录所做的尝试</h3><ol><li><p><strong>使用 ssh-copy-id 实现公钥传输失败</strong>： Windows 的 Bitvise SSH Server 不支持 <code>ssh-copy-id -J</code> 中的 <code>-J</code> 选项。</p></li><li><p><strong>手动添加公钥到 Bitvise 服务器</strong>： 将 C 主机生成的公钥复制进 B 主机 Bitvise 的用户配置中，确保 B 主机能被免密登录。具体配置方式参考下图：<br><img src="/../../../../images/screenshot/ssh_proxyjump_debug.png" class="lazyload" data-srcset="/../../../../images/screenshot/ssh_proxyjump_debug.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Bitvise密钥配置"></p></li><li><p><strong>仍然无法免密连接 A 主机</strong>，在执行如下命令时依然提示输入密码：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -J yourBUser@B_HOST_IP yourAUser@A_HOST_IP</span><br></pre></td></tr></table></figure></li><li><p><strong>尝试用 SSH 命令手动追加公钥到 A 主机 authorized_keys</strong>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -J yourBUser@B_HOST_IP yourAUser@A_HOST_IP \</span><br><span class="line">  <span class="string">&quot;mkdir -p ~/.ssh &amp;&amp; cat &gt;&gt; ~/.ssh/authorized_keys&quot;</span> &lt; ~/.ssh/id_ed25519.pub</span><br></pre></td></tr></table></figure><p>执行成功后，依然提示密码。</p></li></ol><hr><h3 id="关键问题定位与解决"><a href="#关键问题定位与解决" class="headerlink" title="关键问题定位与解决"></a>关键问题定位与解决</h3><p>查看 A 主机日志：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">tail</span> -f /var/log/auth.log  </span><br></pre></td></tr></table></figure><p>发现如下报错：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Authentication refused: bad ownership or modes for directory /home/A</span><br></pre></td></tr></table></figure><p>这是 SSHD 拒绝使用公钥认证的明确信号：<strong>家目录权限设置不安全</strong>。</p><h4 id="✅-解决办法：修复权限"><a href="#✅-解决办法：修复权限" class="headerlink" title="✅ 解决办法：修复权限"></a>✅ 解决办法：修复权限</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 700 /home/USERNAME</span><br><span class="line"><span class="built_in">chmod</span> 700 /home/USERNAME/.ssh</span><br><span class="line"><span class="built_in">chmod</span> 600 /home/USERNAME/.ssh/authorized_keys</span><br><span class="line"><span class="built_in">chown</span> -R USERNAME:USERNAME /home/USERNAME</span><br></pre></td></tr></table></figure><p>执行上述操作后再次尝试连接：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -J yourBUser@B_HOST_IP yourAUser@A_HOST_IP</span><br></pre></td></tr></table></figure><p>👉 免密登录成功！SSHFS 挂载也无需再输入密码。</p><hr><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>本次排错过程经历了：</p><ol><li>正确配置 ProxyJump 和 SSHFS</li><li>在 Windows 跳板机上设置公钥认证（Bitvise）</li><li>手动将公钥复制到目标主机</li><li>排查服务端拒绝认证的根本原因 —— 权限问题</li></ol><p>📌 <strong>教训：哪怕配置都正确，SSH 也会因权限不符合预期而强制拒绝公钥认证！</strong></p><p>希望这篇记录能为遇到类似需求的朋友提供有价值的参考。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;利用-ProxyJump-和-SSHFS-实现主机间免密访问：一次完整的排错记录&quot;&gt;&lt;a href=&quot;#利用-ProxyJump-和-SSHFS-实现主机间免密访问：一次完整的排错记录&quot; class=&quot;headerlink&quot; title=&quot;利用 ProxyJump</summary>
+      
+    
+    
+    
+    
+    <category term="Linux" scheme="https://tech.he0xwhale.xyz/tags/Linux/"/>
+    
+    <category term="SSH" scheme="https://tech.he0xwhale.xyz/tags/SSH/"/>
+    
+    <category term="Ubuntu" scheme="https://tech.he0xwhale.xyz/tags/Ubuntu/"/>
+    
+    <category term="文件共享" scheme="https://tech.he0xwhale.xyz/tags/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/"/>
+    
+    <category term="网络排错" scheme="https://tech.he0xwhale.xyz/tags/%E7%BD%91%E7%BB%9C%E6%8E%92%E9%94%99/"/>
+    
+    <category term="SSHFS" scheme="https://tech.he0xwhale.xyz/tags/SSHFS/"/>
+    
+  </entry>
   
   <entry>
     <title>Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战</title>

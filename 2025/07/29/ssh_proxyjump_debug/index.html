@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <!-- SEO相关 -->
         
-            <link rel="canonical" href="https://tech.he0xwhale.xyz/about/"/>
+            <link rel="canonical" href="https://tech.he0xwhale.xyz/2025/07/29/ssh_proxyjump_debug/"/>
                 <!-- 渲染优化 -->
                     <meta http-equiv='x-dns-prefetch-control' content='on' />
                         <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,21 +34,26 @@
                                                                             <!-- feed -->
                                                                                     <link rel="alternate" href="/atom.xml" title="TECH whale" type="application/atom+xml">
                                                                                                 <!-- 页面元数据 -->
-                                                                                                <title>关于我 - TECH whale</title>
-                                                                                                    <meta name="keywords" content="technology,innovation">
+                                                                                                <title>利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录 - TECH whale</title>
+                                                                                                    <meta name="keywords" content="Linux,SSH,Ubuntu,文件共享,网络排错,SSHFS,technology,innovation">
                                                                                                         <meta desc name="description" content="A blog dedicated to technology and Innovation - he0xwhale - TECH whale">
                                                                                                             
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="https://tech.he0xwhale.xyz/about/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录">
+<meta property="og:url" content="https://tech.he0xwhale.xyz/2025/07/29/ssh_proxyjump_debug/index.html">
 <meta property="og:site_name" content="TECH whale">
-<meta property="og:description" content="你好，欢迎来到我的博客！ 我是一个热爱技术、乐于折腾的创作者，目前正在搭建并维护自己的 Hexo 博客。博客内容会围绕我感兴趣的领域展开，包括但不限于：  编程与技术实践 操作系统 前端开发 后端开发 IT相关技术  我希望这个博客不仅是我的知识笔记和成长记录，也能成为你参考或交流的一个起点。如果你对博客内容有建议，欢迎通过评论或其他方式与我交流！  邮箱: he0xwhale@gmail.com">
+<meta property="og:description" content="利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录在一次内部网络文件共享需求中，我需要让 C 主机（Ubuntu）可以像本地访问一样访问 A 主机（某linux系统）上的文件。整个网络结构如下：  A 主机通过有线连接局域网 X B 主机（Windows 7,使用了Bitvise作为ssh服务端和客户端）作为跳板机，拥有两张网卡： 有线连接局域网 X，与 A 主机互通">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://tech.he0xwhale.xyz/images/seo/og_seo.png">
-<meta property="article:published_time" content="2025-06-18T08:23:09.142Z">
-<meta property="article:modified_time" content="2025-06-18T08:23:09.142Z">
+<meta property="article:published_time" content="2025-07-29T08:40:00.000Z">
+<meta property="article:modified_time" content="2025-07-29T09:20:23.256Z">
 <meta property="article:author" content="he0xwhale">
-<meta property="article:tag" content="technology,innovation">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="SSH">
+<meta property="article:tag" content="Ubuntu">
+<meta property="article:tag" content="文件共享">
+<meta property="article:tag" content="网络排错">
+<meta property="article:tag" content="SSHFS">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://tech.he0xwhale.xyz/images/seo/og_seo.png">
                                                                                                                 <style>
@@ -2159,7 +2164,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2527,8 +2532,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                                     <div class="body-wrapper">
                                                         
 <div id="l_main" class=''>
-  <article itemscope itemtype="https://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-page" id="page" itemscope itemprop="blogPost">
-    <link itemprop="mainEntityOfPage" href="https://tech.he0xwhale.xyz/about/index.html">
+  <article itemscope itemtype="https://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+    <link itemprop="mainEntityOfPage" href="https://tech.he0xwhale.xyz/2025/07/29/ssh_proxyjump_debug/">
     <span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="TECH whale">
   </span>
@@ -2540,16 +2545,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
   
-    <span hidden>
-      <meta itemprop="image" content="/images/seo/logo_seo.png">
-    </span>
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img itemprop="image" class='headimg' src='/images/cover/ssh_proxyjump_debug.png'/>
+      </a>
+    </div>
   
   <div class="article-meta" id="top">
     
     
     
       <h1 class="title" itemprop="name headline">
-        关于我
+        利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录
       </h1>
       <div class='new-meta-box'>
         
@@ -2568,10 +2575,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-06-18T16:23:09+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-07-29T16:40:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：Jun 18, 2025</p>
+    <p>发布于：Jul 29, 2025</p>
   </a>
 </div>
 
@@ -2582,13 +2589,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item wordcount">
     <a class='notlink'>
       <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
-      <p>159 words</p>
+      <p>695 words</p>
     </a>
   </div>
   <div class="new-meta-item readtime">
     <a class='notlink'>
       <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
-      <p>1 min</p>
+      <p>2 min</p>
     </a>
   </div>
 
@@ -2626,24 +2633,83 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
         <div id="layoutHelper-page-plugins"></div>
         <div id="post-body" itemprop="articleBody">
-            <p>你好，欢迎来到我的博客！</p>
-<p>我是一个热爱技术、乐于折腾的创作者，目前正在搭建并维护自己的 Hexo 博客。<br>博客内容会围绕我感兴趣的领域展开，包括但不限于：</p>
+            <h2 id="利用-ProxyJump-和-SSHFS-实现主机间免密访问：一次完整的排错记录"><a href="#利用-ProxyJump-和-SSHFS-实现主机间免密访问：一次完整的排错记录" class="headerlink" title="利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录"></a>利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录</h2><p>在一次内部网络文件共享需求中，我需要让 C 主机（Ubuntu）可以像本地访问一样访问 A 主机（某linux系统）上的文件。整个网络结构如下：</p>
 <ul>
-<li>编程与技术实践</li>
-<li>操作系统</li>
-<li>前端开发</li>
-<li>后端开发</li>
-<li>IT相关技术</li>
+<li>A 主机通过有线连接局域网 X</li>
+<li>B 主机（Windows 7,使用了Bitvise作为ssh服务端和客户端）作为跳板机，拥有两张网卡：<ul>
+<li>有线连接局域网 X，与 A 主机互通</li>
+<li>无线连接局域网 Y，与 C 主机互通</li>
 </ul>
-<p>我希望这个博客不仅是我的知识笔记和成长记录，也能成为你参考或交流的一个起点。如果你对博客内容有建议，欢迎通过评论或其他方式与我交流！</p>
-<ul>
-<li>邮箱: <a href="mailto:&#x68;&#101;&#x30;&#x78;&#119;&#104;&#97;&#108;&#101;&#64;&#103;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">he0xwhale@gmail.com</a></li>
-<li>github: <a target="_blank" rel="noopener" href="https://github.com/he0xwhale">https://github.com/he0xwhale</a></li>
+</li>
+<li>C 主机通过无线连接局域网 Y</li>
 </ul>
+<p>最终目标：<strong>C 主机可以通过文件管理器或终端免密访问 A 主机的共享目录。</strong></p>
+<hr>
+<h3 id="初步思路与尝试"><a href="#初步思路与尝试" class="headerlink" title="初步思路与尝试"></a>初步思路与尝试</h3><ol>
+<li><p><strong>尝试通过 SSHFS 挂载远程目录</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sshfs A-via-B:/home/yourAUser ~/mnt/a-via-b</span><br></pre></td></tr></table></figure>
+
+<p>该命令依赖于 <code>.ssh/config</code> 中定义的 ProxyJump：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Host B</span><br><span class="line">    HostName B_HOST_IP</span><br><span class="line">    User yourBUser</span><br><span class="line">    IdentityFile ~/.ssh/id_ed25519</span><br><span class="line">    IdentitiesOnly yes</span><br><span class="line"></span><br><span class="line">Host A-via-B</span><br><span class="line">    HostName A_HOST_IP</span><br><span class="line">    User yourAUser</span><br><span class="line">    ProxyJump B  </span><br><span class="line">    IdentityFile ~/.ssh/id_ed25519</span><br><span class="line">    IdentitiesOnly yes</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>初始连接测试成功，但每次挂载都要输入密码。</p>
+</li>
+</ol>
+<hr>
+<h3 id="为实现免密登录所做的尝试"><a href="#为实现免密登录所做的尝试" class="headerlink" title="为实现免密登录所做的尝试"></a>为实现免密登录所做的尝试</h3><ol>
+<li><p><strong>使用 ssh-copy-id 实现公钥传输失败</strong>： Windows 的 Bitvise SSH Server 不支持 <code>ssh-copy-id -J</code> 中的 <code>-J</code> 选项。</p>
+</li>
+<li><p><strong>手动添加公钥到 Bitvise 服务器</strong>： 将 C 主机生成的公钥复制进 B 主机 Bitvise 的用户配置中，确保 B 主机能被免密登录。具体配置方式参考下图：<br><img src="/../../../../images/screenshot/ssh_proxyjump_debug.png" class="lazyload" data-srcset="/../../../../images/screenshot/ssh_proxyjump_debug.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Bitvise密钥配置"></p>
+</li>
+<li><p><strong>仍然无法免密连接 A 主机</strong>，在执行如下命令时依然提示输入密码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -J yourBUser@B_HOST_IP yourAUser@A_HOST_IP</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>尝试用 SSH 命令手动追加公钥到 A 主机 authorized_keys</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -J yourBUser@B_HOST_IP yourAUser@A_HOST_IP \</span><br><span class="line">  <span class="string">&quot;mkdir -p ~/.ssh &amp;&amp; cat &gt;&gt; ~/.ssh/authorized_keys&quot;</span> &lt; ~/.ssh/id_ed25519.pub</span><br></pre></td></tr></table></figure>
+
+<p>执行成功后，依然提示密码。</p>
+</li>
+</ol>
+<hr>
+<h3 id="关键问题定位与解决"><a href="#关键问题定位与解决" class="headerlink" title="关键问题定位与解决"></a>关键问题定位与解决</h3><p>查看 A 主机日志：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">sudo</span> <span class="built_in">tail</span> -f /var/log/auth.log  </span><br></pre></td></tr></table></figure>
+
+<p>发现如下报错：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Authentication refused: bad ownership or modes for directory /home/A</span><br></pre></td></tr></table></figure>
+
+<p>这是 SSHD 拒绝使用公钥认证的明确信号：<strong>家目录权限设置不安全</strong>。</p>
+<h4 id="✅-解决办法：修复权限"><a href="#✅-解决办法：修复权限" class="headerlink" title="✅ 解决办法：修复权限"></a>✅ 解决办法：修复权限</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 700 /home/USERNAME</span><br><span class="line"><span class="built_in">chmod</span> 700 /home/USERNAME/.ssh</span><br><span class="line"><span class="built_in">chmod</span> 600 /home/USERNAME/.ssh/authorized_keys</span><br><span class="line"><span class="built_in">chown</span> -R USERNAME:USERNAME /home/USERNAME</span><br></pre></td></tr></table></figure>
+
+<p>执行上述操作后再次尝试连接：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -J yourBUser@B_HOST_IP yourAUser@A_HOST_IP</span><br></pre></td></tr></table></figure>
+
+<p>👉 免密登录成功！SSHFS 挂载也无需再输入密码。</p>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>本次排错过程经历了：</p>
+<ol>
+<li>正确配置 ProxyJump 和 SSHFS</li>
+<li>在 Windows 跳板机上设置公钥认证（Bitvise）</li>
+<li>手动将公钥复制到目标主机</li>
+<li>排查服务端拒绝认证的根本原因 —— 权限问题</li>
+</ol>
+<p>📌 <strong>教训：哪怕配置都正确，SSH 也会因权限不符合预期而强制拒绝公钥认证！</strong></p>
+<p>希望这篇记录能为遇到类似需求的朋友提供有价值的参考。</p>
 
         </div>
         
                 
+                    
+                        <div class='footer'>
+                            <!-- 参考资料、相关资料等 -->
+                            
+                                    <!-- 相关文章 -->
+                                    
+                                                <!-- 版权声明组件 -->
+                                                
+                                                                        <!-- 打赏组件 -->
+                                                                        
+                        </div>
+                        
                             
                                 
 
@@ -2652,10 +2718,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-06-18T16:23:09+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-07-29T17:20:23+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：Jun 18, 2025</p>
+    <p>更新于：Jul 29, 2025</p>
   </a>
 </div>
 
@@ -2663,6 +2729,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         
           
+  
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SSH/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>SSH</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Ubuntu/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Ubuntu</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>文件共享</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E7%BD%91%E7%BB%9C%E6%8E%92%E9%94%99/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>网络排错</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SSHFS/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>SSHFS</p></a></div>
+  <span hidden itemprop="keywords">Linux SSH Ubuntu 文件共享 网络排错 SSHFS</span>
+  
+
 
         
       
@@ -2674,7 +2747,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://tech.he0xwhale.xyz/about/index.html&text=关于我 - TECH whale"
+            target="_blank" href="https://t.me/share/url?url=https://tech.he0xwhale.xyz/2025/07/29/ssh_proxyjump_debug/&text=利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录 - TECH whale"
           
           >
           
@@ -2688,7 +2761,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class='hoverbox'>
           <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC6klEQVR42u3aUVLDMAwE0N7/0nABOvFKSqna5z8gOPbLz46kx4/153ogAAMGDBgwYNbAPIrr6cbF50/P8+z/pu4DBgwYMGDAgNkHcxyAhp6/6/fd84EBAwYMGDBg9sKkwar6fHrw0+DYPh8YMGDAgAED5utgpgNe+kHAgAEDBgwYMGCmYKqNtG4hCgwYMGDAgAHzvTBxgyoEOH3fVMD7t04kGDBgwIABA+ZlMOWB4Tf9+d8nw8GAAQMGDBgwt8N013RwqxaYxu4DBgwYMGDAgFkDM1VourpA+v9dsHKDDwwYMGDAgAGzBqbamEoHeaYvcrpf2qADAwYMGDBgwOyB6R54ugE2NaiUDhyBAQMGDBgwYPbBpEHt7oGjtJE29WHAgAEDBgwYMPtg4gDUbWgNPV8tgF0GWzBgwIABAwbMWph0UDm9SPeDpMEzHdwGAwYMGDBgwOyBmS5YpReqBsrqh4gbbmDAgAEDBgyYdTDVgFQdRE4hpwpaYMCAAQMGDJjPg+kGqLsKYd2G2uU5wIABAwYMGDBrYKoQ3eBXLWSNDwqBAQMGDBgwYD4G5u5BoHSfqcGl4/uCAQMGDBgwYNbApIM1VcDqQavBc6zhBgYMGDBgwIBZB5MWoqYbYNWCVns/MGDAgAEDBswamO4LuwNGU0EtPW+54QYGDBgwYMCAeVuYaoBLB4OmAl73PccBDwwYMGDAgAHz9jDVC05DdhuA5aAIBgwYMGDAgFkLM1Uwqu7fPUc8KAQGDBgwYMCAWQvTXVOFq7RgdlfwBAMGDBgwYMDsgZkKTNWA1gWrBszjhhsYMGDAgAED5u1hqgM3r26Ipe+N9wUDBgwYMGDArIXpBqju4FC6TzWYggEDBgwYMGDApAc5/Xs1EFZhwYABAwYMGDBgusEv3T9uqF0FSjBgwIABAwbMWpi04ZYWjKbfO1UwAwMGDBgwYMDshRlvXDX3rQbQNiQYMGDAgAEDZg2MBQYMGDBgwIBZtn4BpPXo0qOb8OgAAAAASUVORK5CYII=">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADqklEQVR42u3aSZbCMAwFQO5/6e4T8KwpRvDKO4YkdpnFR/LrzyiNFwJw4MCBM8CBWwL3Ko7jAw7XRe9zun/2e931ggMHDhw4cODAbYObmnD08yhkdsOqzwnDgwMHDhw4cODALYXLBtfugquBurzw7nrBgQMHDhw4cOB+FO60wNN9q/efmi84cODAgQMHDhy42vvT8NUGNThw4MCBAwcO3LfBdQ/qZQ/w3W5kr+nkgwMHDhw4cODADcFlRzYQb3tdXi84cODAgQMHDtwSuO6YbgSfAm23MNleLzhw4MCBAwcO3BK4bgGy28iOLuzpeYYb2uDAgQMHDhw4cEvhshOPBtVuY7s6n2wwPn4ODhw4cODAgQP3pXDhoDgcmKMbUC2UhucFDhw4cODAgQO3BC47ganG9FRgnQru4evBgQMHDhw4cOCWwFUPAFa/n20MTwX06P3L/xzAgQMHDhw4cOA+BFdt8GaDZBb2VkM7vA5w4MCBAwcOHLhlcN1GcbZgWT0w2A221cAMDhw4cODAgQO3FS5bUMxOcKrB3Q3I2XmE/zmAAwcOHDhw4MBdhqs2krsHDKsFz+xGTgVlcODAgQMHDhy4bXBThcHuAb50Yzi5EdnC69vrwIEDBw4cOHDglsC1G7TJoNoNztXndxvW4MCBAwcOHDhw2+CmCpNVwGqwnoYMN7bBgQMHDhw4cOC+BC5bGKw2tLuBuRvgwz8kcODAgQMHDhy45XBRgCxYd0HdABsOutlOPjhw4MCBAwcO3GW4pw4EViGmg/F4YAYHDhw4cODAgVsKV51wtQBaXXD1uWMNaXDgwIEDBw4cuGVwTzV2q4XIbiM8+nn4NThw4MCBAwcO3BK4bEEx27CeakxnAbLvhwMxOHDgwIEDBw7cMrjuwcFuMO02oLsbF95gcODAgQMHDhy4pXDdYPpUgzoaeLON6fR14MCBAwcOHDhwS+G6BcTq/bKB+3V5gAMHDhw4cODAbYPrjukgmgXLFiKzDfK3DWlw4MCBAwcOHLgPwz0dSKcmnIXvvg7/cwAHDhw4cODAgfsw3O0AOx2sb20gOHDgwIEDBw7cVrjbDejoxlxrOJ/mBw4cOHDgwIED92Nw1SCdDarR4Fp9/7hecODAgQMHDhy4H4ObPnDYLYxmNzQckMGBAwcOHDhw4JbCTS8wuxHV51YLqOngDQ4cOHDgwIEDtwyu28D9K46pgBu9T7YwCw4cOHDgwIEDtxXOSG40AnDgwIEzwIH77PgHwUKBiFSDkacAAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -2696,7 +2769,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://tech.he0xwhale.xyz/about/index.html&title=关于我 - TECH whale&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://tech.he0xwhale.xyz/2025/07/29/ssh_proxyjump_debug/&title=利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录 - TECH whale&summary="
           
           >
           
@@ -2708,7 +2781,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://tech.he0xwhale.xyz/about/index.html&title=关于我 - TECH whale&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://tech.he0xwhale.xyz/2025/07/29/ssh_proxyjump_debug/&title=利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录 - TECH whale&summary="
           
           >
           
@@ -2720,7 +2793,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://tech.he0xwhale.xyz/about/index.html&title=关于我 - TECH whale&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://tech.he0xwhale.xyz/2025/07/29/ssh_proxyjump_debug/&title=利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录 - TECH whale&summary="
           
           >
           
@@ -2747,6 +2820,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                         
 
                                                             
+                                                                <div class="prev-next">
+                                                                    
+                                                                            
+                                                                                <a class='next' href='/2025/06/24/ubuntu_die/'>
+                                                                                    <p class='title'>
+                                                                                        Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+                                                                                    <p class='content'>
+                                                                                        Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战在日常使用 Ubuntu 桌面系统时，偶尔会遇到切换应用程序时系统彻底卡死的情况。特别是在操作大量文件、删除大文件夹时，系统响应迟缓，CP...
+                                                                                    </p>
+                                                                                </a>
+                                                                                
+                                                                </div>
+                                                                
                                                                     <!-- 文章推荐 -->
                                                                     
                                                                         
@@ -2761,7 +2847,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/about/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2025/07/29/ssh_proxyjump_debug/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2790,6 +2876,20 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   
 
+
+<section class="widget toc-wrapper desktop mobile" id="toc-div" >
+  
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A9%E7%94%A8-ProxyJump-%E5%92%8C-SSHFS-%E5%AE%9E%E7%8E%B0%E4%B8%BB%E6%9C%BA%E9%97%B4%E5%85%8D%E5%AF%86%E8%AE%BF%E9%97%AE%EF%BC%9A%E4%B8%80%E6%AC%A1%E5%AE%8C%E6%95%B4%E7%9A%84%E6%8E%92%E9%94%99%E8%AE%B0%E5%BD%95"><span class="toc-text">利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9D%E6%AD%A5%E6%80%9D%E8%B7%AF%E4%B8%8E%E5%B0%9D%E8%AF%95"><span class="toc-text">初步思路与尝试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E5%AE%9E%E7%8E%B0%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95%E6%89%80%E5%81%9A%E7%9A%84%E5%B0%9D%E8%AF%95"><span class="toc-text">为实现免密登录所做的尝试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E9%97%AE%E9%A2%98%E5%AE%9A%E4%BD%8D%E4%B8%8E%E8%A7%A3%E5%86%B3"><span class="toc-text">关键问题定位与解决</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E2%9C%85-%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95%EF%BC%9A%E4%BF%AE%E5%A4%8D%E6%9D%83%E9%99%90"><span class="toc-text">✅ 解决办法：修复权限</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></li></ol>
+  </div>
+</section>
 
   
 
@@ -3390,7 +3490,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},{"@context":"https://schema.org","@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","sameAs":["https://github.com/he0xwhale"],"description":"A blog dedicated to technology and Innovation"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tech.he0xwhale.xyz/","name":"TECH whale"}}]},{"@context":"https://schema.org","@type":"WebSite","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","keywords":"technology,innovation","description":"A blog dedicated to technology and Innovation","author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","description":"A blog dedicated to technology and Innovation"},"publisher":{"@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tech.he0xwhale.xyz?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org","@type":"BlogPosting","headline":"关于我","description":"A blog dedicated to technology and Innovation","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://tech.he0xwhale.xyz/about/index.html"},"author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz"},"publisher":{"@type":"Organization","name":"TECH whale","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"url":"https://tech.he0xwhale.xyz/about/index.html","wordCount":0,"datePublished":"2025-06-18T08:23:09.142Z","dateModified":"2025-06-18T08:23:09.142Z","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},{"@context":"https://schema.org","@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","sameAs":["https://github.com/he0xwhale"],"description":"A blog dedicated to technology and Innovation"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tech.he0xwhale.xyz/","name":"TECH whale"}},{"@type":"ListItem","position":3,"item":{"@id":"https://tech.he0xwhale.xyz/2025/07/29/ssh_proxyjump_debug/","name":"利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录"}}]},{"@context":"https://schema.org","@type":"WebSite","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","keywords":"technology,innovation","description":"A blog dedicated to technology and Innovation","author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","description":"A blog dedicated to technology and Innovation"},"publisher":{"@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tech.he0xwhale.xyz?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org","@type":"BlogPosting","headline":"利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录","description":"A blog dedicated to technology and Innovation","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://tech.he0xwhale.xyz/2025/07/29/ssh_proxyjump_debug/"},"author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz"},"publisher":{"@type":"Organization","name":"TECH whale","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"url":"https://tech.he0xwhale.xyz/2025/07/29/ssh_proxyjump_debug/","wordCount":0,"datePublished":"2025-07-29T08:40:00.000Z","dateModified":"2025-07-29T09:20:23.256Z","keywords":"Linux,SSH,Ubuntu,文件共享,网络排错,SSHFS","image":{"@type":"ImageObject","url":"/images/cover/ssh_proxyjump_debug.png","width":1024,"height":768}}]</script>
 
 
 

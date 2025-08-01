@@ -5,8 +5,8 @@
         <meta name="Volantis" content="6.0.0-alpha.1">
         <meta charset="utf-8">
         <!-- SEO相关 -->
-        <meta name="robots" content="noindex,follow">
-            <link rel="canonical" href="https://tech.he0xwhale.xyz/tags/文件删除/"/>
+        
+            <link rel="canonical" href="https://tech.he0xwhale.xyz/2025/08/01/markdownlint_auto_fix/"/>
                 <!-- 渲染优化 -->
                     <meta http-equiv='x-dns-prefetch-control' content='on' />
                         <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,25 @@
                                                                             <!-- feed -->
                                                                                     <link rel="alternate" href="/atom.xml" title="TECH whale" type="application/atom+xml">
                                                                                                 <!-- 页面元数据 -->
-                                                                                                <title>Tag: 文件删除 - TECH whale</title>
-                                                                                                    <meta name="keywords" content="technology,innovation">
+                                                                                                <title>使用 markdownlint-cli2 实现 Markdown 批量格式修复：一次完整的实战记录 - TECH whale</title>
+                                                                                                    <meta name="keywords" content="Markdown,VS Code,格式规范,文档质量,自动化工具,technology,innovation">
                                                                                                         <meta desc name="description" content="A blog dedicated to technology and Innovation - he0xwhale - TECH whale">
                                                                                                             
-<meta property="og:type" content="website">
-<meta property="og:title" content="TECH whale">
-<meta property="og:url" content="https://tech.he0xwhale.xyz/tags/%E6%96%87%E4%BB%B6%E5%88%A0%E9%99%A4/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用 markdownlint-cli2 实现 Markdown 批量格式修复：一次完整的实战记录">
+<meta property="og:url" content="https://tech.he0xwhale.xyz/2025/08/01/markdownlint_auto_fix/index.html">
 <meta property="og:site_name" content="TECH whale">
-<meta property="og:description" content="A blog dedicated to technology and Innovation">
+<meta property="og:description" content="在整理一个包含大量 Markdown 文档的项目时，编辑器（VS Code）中出现了大量 MD032&#x2F;blanks-around-lists 的提示，意思是“列表前后应有空行”。由于涉及文档数量众多，手动修复非常耗时，因此我们尝试寻找一键修复的方法，以下是完整的排查与解决过程记录。 初步调查：确认提示信息在 VS Code 中安装了官方推荐的 Markdown 插件（David Anson 的 M">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://tech.he0xwhale.xyz/images/seo/og_seo.png">
+<meta property="article:published_time" content="2025-08-01T02:00:00.000Z">
+<meta property="article:modified_time" content="2025-08-01T03:44:13.763Z">
 <meta property="article:author" content="he0xwhale">
-<meta property="article:tag" content="technology,innovation">
+<meta property="article:tag" content="Markdown">
+<meta property="article:tag" content="VS Code">
+<meta property="article:tag" content="格式规范">
+<meta property="article:tag" content="文档质量">
+<meta property="article:tag" content="自动化工具">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://tech.he0xwhale.xyz/images/seo/og_seo.png">
                                                                                                                 <style>
@@ -2157,7 +2163,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2524,25 +2530,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
                                                 <div id="safearea">
                                                     <div class="body-wrapper">
                                                         
-
 <div id="l_main" class=''>
-  
-    
-      
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur" itemscope itemtype="https://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://tech.he0xwhale.xyz/2025/06/24/ubuntu_die/">
+  <article itemscope itemtype="https://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+    <link itemprop="mainEntityOfPage" href="https://tech.he0xwhale.xyz/2025/08/01/markdownlint_auto_fix/">
     <span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="TECH whale">
   </span>
@@ -2551,69 +2541,318 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="A blog dedicated to technology and Innovation">
   </span>
     
+
+
+  
+    <div class='headimg-div'>
+      <a class='headimg-a'>
+        <img itemprop="image" class='headimg' src='/images/cover/markdownlint_auto_fix.png'/>
+      </a>
+    </div>
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title" itemprop="name headline">
+        使用 markdownlint-cli2 实现 Markdown 批量格式修复：一次完整的实战记录
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+    <div class='new-meta-item author' itemprop="author" itemscope itemtype="https://schema.org/Person">
+        <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="images/website/logo.png" class="lazyload" data-srcset="images/website/logo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">he0xwhale</p>
+  </a>
+    </div>
+          
+        
+          
+            
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2025-08-01T10:00:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Aug 1, 2025</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>657 words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>2 min</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+
+<div class="new-meta-item browse">
+  <a class='notlink'>
+    <p>
+      <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
+      
+      <span id="busuanzi_page_pv">
+        <i class="fa-solid fa-loader fa-spin fa-fw" aria-hidden="true"></i>
+      </span>
+        
+      <span>次浏览</span>
+    </p>
+  </a>
+</div>
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+        <div id="layoutHelper-page-plugins"></div>
+        <div id="post-body" itemprop="articleBody">
+            <p>在整理一个包含大量 Markdown 文档的项目时，编辑器（VS Code）中出现了大量 <code>MD032/blanks-around-lists</code> 的提示，意思是“列表前后应有空行”。由于涉及文档数量众多，手动修复非常耗时，因此我们尝试寻找一键修复的方法，以下是完整的排查与解决过程记录。</p>
+<h2 id="初步调查：确认提示信息"><a href="#初步调查：确认提示信息" class="headerlink" title="初步调查：确认提示信息"></a>初步调查：确认提示信息</h2><p>在 VS Code 中安装了官方推荐的 Markdown 插件（<a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint">David Anson 的 Markdownlint</a>）后，文档中出现了大量如下提示：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MD032/blanks-around-lists: Lists should be surrounded by blank lines</span><br></pre></td></tr></table></figure>
+
+<p>这属于 markdownlint 的一条格式规则，主要目的是增强可读性和统一性。</p>
+<h2 id="查找自动修复工具"><a href="#查找自动修复工具" class="headerlink" title="查找自动修复工具"></a>查找自动修复工具</h2><p>我们首先了解到了 <code>markdownlint-cli2</code> 工具，它是一个命令行工具，支持 lint 多个文件，也支持批量修复。</p>
+<h3 id="安装-markdownlint-cli2"><a href="#安装-markdownlint-cli2" class="headerlink" title="安装 markdownlint-cli2"></a>安装 markdownlint-cli2</h3><p>可使用如下命令全局安装（或使用 <code>npx</code> 临时运行）：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g markdownlint-cli2</span><br></pre></td></tr></table></figure>
+
+<h3 id="执行修复命令"><a href="#执行修复命令" class="headerlink" title="执行修复命令"></a>执行修复命令</h3><p>最关键的是使用 <code>--fix</code> 参数：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">markdownlint-cli2 <span class="string">&quot;**/*.md&quot;</span> <span class="string">&quot;#node_modules&quot;</span> --fix</span><br></pre></td></tr></table></figure>
+
+<p>其中：</p>
+<ul>
+<li><code>&quot;**/*.md&quot;</code> 表示匹配当前目录及子目录下所有 <code>.md</code> 文件</li>
+<li><code>&quot;#node_modules&quot;</code> 表示排除 <code>node_modules</code> 文件夹</li>
+<li><code>--fix</code> 表示自动修复支持的规则</li>
+</ul>
+<p>执行后终端输出显示：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Summary: 25 error(s)</span><br></pre></td></tr></table></figure>
+
+<p>可以看到诸如 <code>MD032</code> 的错误已被成功修复。</p>
+<h2 id="处理未修复的规则"><a href="#处理未修复的规则" class="headerlink" title="处理未修复的规则"></a>处理未修复的规则</h2><p>自动修复后，还剩下一些不能自动修复的错误，包括：</p>
+<table>
+<thead>
+<tr>
+<th>规则</th>
+<th>含义</th>
+<th>建议</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>MD013</code></td>
+<td>行长度超出限制（默认 80）</td>
+<td>可手动换行，或禁用</td>
+</tr>
+<tr>
+<td><code>MD040</code></td>
+<td>代码块未指定语言</td>
+<td>建议改成 <code>bash、</code>python 等</td>
+</tr>
+<tr>
+<td><code>MD036</code></td>
+<td>使用斜体模拟标题</td>
+<td>应使用 #、## 等 Markdown 标题语法</td>
+</tr>
+</tbody></table>
+<h2 id="可选配置：禁用部分规则"><a href="#可选配置：禁用部分规则" class="headerlink" title="可选配置：禁用部分规则"></a>可选配置：禁用部分规则</h2><p>在 <code>.markdownlint.json</code> 中可禁用不希望使用的规则：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;MD013&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;MD036&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;MD040&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="补充说明：关于误传的-markdownlint-cli2-fix"><a href="#补充说明：关于误传的-markdownlint-cli2-fix" class="headerlink" title="补充说明：关于误传的 markdownlint-cli2-fix"></a>补充说明：关于误传的 <code>markdownlint-cli2-fix</code></h2><p>在过程中我们曾尝试安装名为 <code>markdownlint-cli2-fix</code> 的包：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g markdownlint-cli2-fix</span><br></pre></td></tr></table></figure>
+
+<p>但发现该包并不存在，最终确认：<code>markdownlint-cli2</code> 本身已内置 <code>--fix</code> 功能，不需要安装额外的工具。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过 <code>markdownlint-cli2 --fix</code>，我们顺利解决了 Markdown 项目中的批量格式问题，尤其是大量 <code>MD032</code> 报错，极大提升了文档质量和维护效率。结合配置文件与简单的脚本处理，其它无法自动修复的错误也可以高效清理。</p>
+<p>对于文档量大或协作性强的项目，建议将 lint 步骤加入 CI&#x2F;CD 流程，确保格式统一、阅读体验良好。</p>
+
+        </div>
         
                 
-                    <div class='headimg-div'>
-                        <a class='headimg-a' href="/2025/06/24/ubuntu_die/">
-        <img itemprop="image" class='headimg' alt="Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战" src='/images/cover/ubuntu_die.png'/>
-      </a>
-                    </div>
                     
+                        <div class='footer'>
+                            <!-- 参考资料、相关资料等 -->
+                            
+                                    <!-- 相关文章 -->
+                                    
+                                                <!-- 版权声明组件 -->
+                                                
+                                                                        <!-- 打赏组件 -->
+                                                                        
+                        </div>
+                        
                             
                                 
-                                    <h2 class="article-title"  itemprop="name headline">
-                                        <a href="/2025/06/24/ubuntu_die/" itemprop="url">
-                                            Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战
-                                        </a>
-                                    </h2>
-                                    
-                                            <div class='md article-desc' itemprop="articleBody">
-                                                
-                                                                
-                                                                    Ubuntu 系统卡顿时的应急处理与大文件夹删除优化实战在日常使用 Ubuntu 桌面系统时，偶尔会遇到切换应用程序时系统彻底卡死的情况。特别是在操作大量文件、删除大文件夹时，系统响应迟缓，CPU 占用飙升，图形界面几乎失效，令人十分头疼。本文结合实战经验，分享在系统卡顿时的应急处理步骤以及如何高效删除包含大量小文件的大文件夹，帮助你快速恢复系统并避免类似问题再次发生。
 
-一、系统卡顿时如何...
-                                                                        
-                                                                                    
-                                            </div>
-                                            
-                                                <div class='meta-v3' line_style='solid'>
-                                                    <div>
-                                                        
-                                                            
-                                                                <a class='avatar' href='/'><img src='images/website/logo.png'></a>
-                                                                <span hidden itemprop="author" itemscope itemtype="https://schema.org/Person">
-            <meta itemprop="image" content="images/website/logo.png">
-            <meta itemprop="name" content="he0xwhale">
-            <meta itemprop="url" content="/">
-          </span>
-                                                                
-                                                                    <time itemprop="dateCreated datePublished" datetime="2025-06-24T10:30:41+08:00">2025-06-24</time>
-                                                                    
-                                                    </div>
-                                                    
-                                                        <div>
-                                                            <a class='readmore' href='/2025/06/24/ubuntu_die/' itemprop="url">
-                                                                Read More
-                                                            </a>
-                                                        </div>
-                                                        
-                                                </div>
-                                                
 
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2025-08-01T11:44:13+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Aug 1, 2025</p>
+  </a>
 </div>
-          </div>
+
         
       
-    
-  </section>
+        
+          
   
-    
+  
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Markdown/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>Markdown</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/VS-Code/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>VS Code</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>格式规范</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%96%87%E6%A1%A3%E8%B4%A8%E9%87%8F/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>文档质量</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>自动化工具</p></a></div>
+  <span hidden itemprop="keywords">Markdown VS Code 格式规范 文档质量 自动化工具</span>
   
 
 
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  
+      
+        <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
+          
+            target="_blank" href="https://t.me/share/url?url=https://tech.he0xwhale.xyz/2025/08/01/markdownlint_auto_fix/&text=使用 markdownlint-cli2 实现 Markdown 批量格式修复：一次完整的实战记录 - TECH whale"
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/telegram.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/telegram.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a class='share'><img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/wechat.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/wechat.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></a>
+          <div class='target'>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAAE4CAAAAADqFLC2AAADsElEQVR42u3aQXLjMAwEQP3/05v7VrlEDKAIcTVvThSKbPqAYHj9M6JxIQAHDhw4Axy4JXBXOP7/+0/z3T33cYEf5rl7/vS5eL/gwIEDBw4cOHDL4I4LwCbcHUgKNnVgt/sFBw4cOHDgwIFbCtcteE8L224BXT2osf2CAwcOHDhw4MB9CVwVYPr5aqELDhw4cODAgQMHbrYwrQbG3UAaHDhw4MCBAwfu2+CmLvB1g+an5luT5IMDBw4cOHDgwA3BVcdUg/Gtz/F+wYEDBw4cOHDglsBNjTTIPt3QU+8t7xMcOHDgwIEDB24JXDcYrhbGaXBcbWSmQXb5Pwdw4MCBAwcOHLglcGkBOV34poVut3C+XQc4cODAgQMHDtwyuNOCtRsApwVs9aC68378DA4cOHDgwIEDtwQunbAbJE8d3Gkj9GoOcODAgQMHDhy4rXDVF1eD5jTIrgbVKfxxQQwOHDhw4MCBA7cMLi1k02A4BZ+6eBgDgwMHDhw4cODALYGrBs9VqHKjsHrRL1xPvD5w4MCBAwcOHLg/CvdUgF1tWKYNzfQLAA4cOHDgwIEDtxVu6gLgU4V0eoDVg7s9MHDgwIEDBw4cuKVw1QVUg+rufMfB8fD6wIEDBw4cOHDgtsFVL+R1g+duAP1UI/W44AYHDhw4cODAgVsKVx1xQ/Clxmg3WAcHDhw4cODAgdsClxaE0xcC0/dXYdOCGxw4cODAgQMHbhvcKUi60TQQ7jZA02D9+GIhOHDgwIEDBw7cy3BpcJs2FJ8+qG6gXm5kggMHDhw4cODALYVLG5TxwsIAOv19+QsCDhw4cODAgQO3BK5acKYbmWpkpo3T0y/AcQEMDhw4cODAgQP3MtzUxqcX2r2g2C2IjwNpcODAgQMHDhy4JXDpRb5q4JseSLfxOt4BBgcOHDhw4MCBexluqsDtBtdTsNNBNzhw4MCBAwcO3Ha4tAAuNwTDi4HVBmS74D0tgMGBAwcOHDhw4H4Zrjuu5jiFmGpwtgNscODAgQMHDhy4JXDTG65CVwPvtFAea7yCAwcOHDhw4MAtg6sWvNUAuLvwqSC6WziDAwcOHDhw4MBthSsHtMXCuDpfOv9UcA4OHDhw4MCBA/ftcGmBmxbM6fPtgh8cOHDgwIEDB+5L4KYahNMN1GqwDQ4cOHDgwIED99fhUpBqgdo9kDGI6kVKcODAgQMHDhy4ZXBpgDsdUJ/+PL1w2L4ICQ4cOHDgwIEDtwTOKDZUEYADBw6cAQ7cu+MH9l7+NRs9h7AAAAAASUVORK5CYII=">
+          </div>
+        </div>
+      
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://tech.he0xwhale.xyz/2025/08/01/markdownlint_auto_fix/&title=使用 markdownlint-cli2 实现 Markdown 批量格式修复：一次完整的实战记录 - TECH whale&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://tech.he0xwhale.xyz/2025/08/01/markdownlint_auto_fix/&title=使用 markdownlint-cli2 实现 Markdown 批量格式修复：一次完整的实战记录 - TECH whale&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://tech.he0xwhale.xyz/2025/08/01/markdownlint_auto_fix/&title=使用 markdownlint-cli2 实现 Markdown 批量格式修复：一次完整的实战记录 - TECH whale&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+                                    
+                                        
+
+                                                            
+                                                                <div class="prev-next">
+                                                                    
+                                                                            
+                                                                                <a class='next' href='/2025/07/29/ssh_proxyjump_debug/'>
+                                                                                    <p class='title'>
+                                                                                        利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+                                                                                    <p class='content'>
+                                                                                        利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录在一次内部网络文件共享需求中，我需要让 C 主机（Ubuntu）可以像本地访问一样访问 A 主机（某linux系统...
+                                                                                    </p>
+                                                                                </a>
+                                                                                
+                                                                </div>
+                                                                
+                                                                    <!-- 文章推荐 -->
+                                                                    
+                                                                        
+                                                                                    <!-- Custom Files postEnd begin-->
+                                                                                    
+                                                                                        <!-- Custom Files postEnd end-->
+</article>
+
+
+    
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2025/08/01/markdownlint_auto_fix/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+        
 </div>
 <aside id='l_side' itemscope itemtype="https://schema.org/WPSideBar">
     
@@ -2622,217 +2861,31 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-    <section class="widget blogger desktop mobile ">
-        <div class='content'>
-            
-                
-                    <a class='avatar flat-box rectangle' href='/about/'>
-          <!-- <img no-lazy src='/images/website/avatar.png'/> -->
-          <!-- <img no-lazy src="/images/website/avatar.png" /> -->
-          <!-- <img src="/TEST123456.png" class="lazyload" data-srcset="/TEST123456.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /> -->
-          <img src="/images/website/avatar.png?ts=1754020174597" class="lazyload" data-srcset="/images/website/avatar.png?ts=1754020174597" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-        </a>
-                    
-                            
-                                
-                                    <div class='text'>
-                                        
-                                            <h2>
-                                                赛博鲸鱼的代码世界
-                                            </h2>
-                                            
-                                                
-                                                    <p>探索技术的奥秘与乐趣</p>
-
-                                                        
-                                                            <!-- 
-                                                                <p><span id="jinrishici-sentence">霓虹裂影鲸穿网，代码流光织梦中。</span></p>
-                                                                <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-                                                                 -->
-                                                            
-                                                                <p><span class="jinrishici-sentence">霓虹裂影鲸穿网，代码流光织梦中。</span></p>
-                                                                <!-- <i class="fas fa-pen-nib"></i> 昼夜兼程敲代码，浮沉浪里写春秋。 -->
-                                                                
-                                    </div>
-                                    
-                                        
-                                            <div class="social-wrapper">
-                                                
-                                                    
-                                                        <a href="/atom.xml" class="social fa-solid fa-rss flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
-                                                            
-                                                        </a>
-                                                        
-                                                            
-                                                    
-                                                        <a href="mailto:he0xwhale@gmail.com" class="social fa-solid fa-envelope flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
-                                                            
-                                                        </a>
-                                                        
-                                                            
-                                                    
-                                                        <a href="https://github.com/he0xwhale/" class="social fab fa-github flat-btn" target="_blank" rel="external nofollow noopener noreferrer">
-                                                            
-                                                        </a>
-                                                        
-                                                            
-                                            </div>
-                                            
-        </div>
-    </section>
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"
-            active-action="action-categoriesE58D9AE5AEA2E690ADE5BBBA"
-            ><div class='name'>博客搭建</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget tagcloud desktop mobile">
-    
-  <header>
-    
-      <a href='/blog/tags/'><i class="fa-solid fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/Bug%E6%8E%92%E6%9F%A5/" style="font-size: 14px; color: #999">Bug排查</a> <a href="/tags/CSS%E4%B8%BB%E9%A2%98/" style="font-size: 14px; color: #999">CSS主题</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/Linux/" style="font-size: 24px; color: #555">Linux</a> <a href="/tags/Markdown/" style="font-size: 14px; color: #999">Markdown</a> <a href="/tags/SSH/" style="font-size: 14px; color: #999">SSH</a> <a href="/tags/SSHFS/" style="font-size: 14px; color: #999">SSHFS</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu</a> <a href="/tags/Ubuntu/" style="font-size: 14px; color: #999">Ubuntu </a> <a href="/tags/VS-Code/" style="font-size: 14px; color: #999">VS Code</a> <a href="/tags/Volantis/" style="font-size: 14px; color: #999">Volantis</a> <a href="/tags/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" style="font-size: 14px; color: #999">博客美化</a> <a href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" style="font-size: 14px; color: #999">性能优化</a> <a href="/tags/%E6%96%87%E4%BB%B6%E5%85%B1%E4%BA%AB/" style="font-size: 14px; color: #999">文件共享</a> <a href="/tags/%E6%96%87%E4%BB%B6%E5%88%A0%E9%99%A4/" style="font-size: 14px; color: #999">文件删除</a> <a href="/tags/%E6%96%87%E6%A1%A3%E8%B4%A8%E9%87%8F/" style="font-size: 14px; color: #999">文档质量</a> <a href="/tags/%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/" style="font-size: 14px; color: #999">格式规范</a> <a href="/tags/%E7%B3%BB%E7%BB%9F%E5%8D%A1%E9%A1%BF/" style="font-size: 14px; color: #999">系统卡顿</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E6%8E%92%E9%94%99/" style="font-size: 14px; color: #999">网络排错</a> <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/" style="font-size: 14px; color: #999">自动化工具</a> <a href="/tags/%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86/" style="font-size: 14px; color: #999">进程管理</a>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-
-  
-    
-    
-      
-
-    
-        <section class="widget desktop">
-            
-  <header>
-    
-      <i class="fa-solid fa-award fa-fw" aria-hidden="true"></i><span class='name'>站点信息</span>
-    
-  </header>
-
-
-                <div class='content'>
-                    <div class="webinfo">
-                        
-                            <div class="webinfo-item">
-                                <div>
-                                    文章数目：
-                                </div>
-                                <div>
-                                    4
-                                        篇
-                                </div>
-                            </div>
-                            
-
-                                
-                                    <div class="webinfo-item">
-                                        <div>
-                                            已运行时间：
-                                        </div>
-                                        <div id="webinfo-runtime-count"></div>
-                                    </div>
-                                    
-
-
-                                        
-                                            <div class="webinfo-item">
-                                                <div>
-                                                    本站总字数：
-                                                </div>
-                                                <div>
-                                                    3k
-                                                        字
-                                                </div>
-                                            </div>
-                                            
-
-                                                
-                                                    <div class="webinfo-item">
-                                                        <div>
-                                                            本站访客数：
-                                                        </div>
-                                                        <div>
-                                                            <span id="busuanzi_site_uv">
-              <i class="fa-solid fa-fan fa-spin fa-fw" aria-hidden="true"></i>
-            </span>
-                                                            人
-                                                        </div>
-                                                    </div>
-                                                    <div class="webinfo-item">
-                                                        <div>
-                                                            本站总访问量：
-                                                        </div>
-                                                        <div>
-                                                            <span id="busuanzi_site_pv">
-              <i class="fa-solid fa-fan fa-spin fa-fw" aria-hidden="true"></i>
-            </span>
-                                                            次
-                                                        </div>
-                                                    </div>
-                                                    
-
-                                                        
-                                                            <div class="webinfo-item">
-                                                                <div>
-                                                                    最后活动时间：
-                                                                </div>
-                                                                <div id="last-update-show">
-                                                                    2025-08-01
-                                                                        日
-                                                                </div>
-                                                            </div>
-                                                            
-                    </div>
-                </div>
-        </section>
     
   
 
 
 <div class="widget-sticky">
+
+  
+  
+
+
+<section class="widget toc-wrapper desktop mobile" id="toc-div" >
+  
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+  <div class='content'>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E6%AD%A5%E8%B0%83%E6%9F%A5%EF%BC%9A%E7%A1%AE%E8%AE%A4%E6%8F%90%E7%A4%BA%E4%BF%A1%E6%81%AF"><span class="toc-text">初步调查：确认提示信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E8%87%AA%E5%8A%A8%E4%BF%AE%E5%A4%8D%E5%B7%A5%E5%85%B7"><span class="toc-text">查找自动修复工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-markdownlint-cli2"><span class="toc-text">安装 markdownlint-cli2</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E4%BF%AE%E5%A4%8D%E5%91%BD%E4%BB%A4"><span class="toc-text">执行修复命令</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E6%9C%AA%E4%BF%AE%E5%A4%8D%E7%9A%84%E8%A7%84%E5%88%99"><span class="toc-text">处理未修复的规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E9%80%89%E9%85%8D%E7%BD%AE%EF%BC%9A%E7%A6%81%E7%94%A8%E9%83%A8%E5%88%86%E8%A7%84%E5%88%99"><span class="toc-text">可选配置：禁用部分规则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85%E8%AF%B4%E6%98%8E%EF%BC%9A%E5%85%B3%E4%BA%8E%E8%AF%AF%E4%BC%A0%E7%9A%84-markdownlint-cli2-fix"><span class="toc-text">补充说明：关于误传的 markdownlint-cli2-fix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+  </div>
+</section>
+
+  
 
 </div>
 
@@ -2840,6 +2893,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
             <!-- Custom Files side end -->
 </aside>
+
 
                                                     </div>
                                                     
@@ -3430,7 +3484,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},{"@context":"https://schema.org","@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","sameAs":["https://github.com/he0xwhale"],"description":"A blog dedicated to technology and Innovation"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tech.he0xwhale.xyz/","name":"TECH whale"}},{"@type":"ListItem","position":2,"item":{"@id":"https://tech.he0xwhale.xyz/tags/文件删除/","name":"文件删除"}}]},{"@context":"https://schema.org","@type":"WebSite","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","keywords":"technology,innovation","description":"A blog dedicated to technology and Innovation","author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","description":"A blog dedicated to technology and Innovation"},"publisher":{"@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tech.he0xwhale.xyz?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org","@type":"BlogPosting","description":"A blog dedicated to technology and Innovation","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz"},"publisher":{"@type":"Organization","name":"TECH whale","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},{"@context":"https://schema.org","@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","sameAs":["https://github.com/he0xwhale"],"description":"A blog dedicated to technology and Innovation"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://tech.he0xwhale.xyz/","name":"TECH whale"}},{"@type":"ListItem","position":3,"item":{"@id":"https://tech.he0xwhale.xyz/2025/08/01/markdownlint_auto_fix/","name":"使用 markdownlint-cli2 实现 Markdown 批量格式修复：一次完整的实战记录"}}]},{"@context":"https://schema.org","@type":"WebSite","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","keywords":"technology,innovation","description":"A blog dedicated to technology and Innovation","author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz","description":"A blog dedicated to technology and Innovation"},"publisher":{"@type":"Organization","name":"TECH whale","url":"https://tech.he0xwhale.xyz/","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://tech.he0xwhale.xyz?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"https://schema.org","@type":"BlogPosting","headline":"使用 markdownlint-cli2 实现 Markdown 批量格式修复：一次完整的实战记录","description":"A blog dedicated to technology and Innovation","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"https://tech.he0xwhale.xyz/2025/08/01/markdownlint_auto_fix/"},"author":{"@type":"Person","name":"he0xwhale","image":{"@type":"ImageObject","url":"/images/seo/logo_seo.png"},"url":"https://ai.he0xwhale.xyz"},"publisher":{"@type":"Organization","name":"TECH whale","logo":{"@type":"ImageObject","url":"/images/seo/logo_seo.png","width":192,"height":192}},"url":"https://tech.he0xwhale.xyz/2025/08/01/markdownlint_auto_fix/","wordCount":0,"datePublished":"2025-08-01T02:00:00.000Z","dateModified":"2025-08-01T03:44:13.763Z","keywords":"Markdown,VS Code,格式规范,文档质量,自动化工具","image":{"@type":"ImageObject","url":"/images/cover/markdownlint_auto_fix.png","width":1024,"height":768}}]</script>
 
 
 

@@ -6,7 +6,7 @@
   <link href="https://tech.he0xwhale.xyz/atom.xml" rel="self"/>
   
   <link href="https://tech.he0xwhale.xyz/"/>
-  <updated>2025-07-29T09:20:23.256Z</updated>
+  <updated>2025-08-01T03:44:13.763Z</updated>
   <id>https://tech.he0xwhale.xyz/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 markdownlint-cli2 实现 Markdown 批量格式修复：一次完整的实战记录</title>
+    <link href="https://tech.he0xwhale.xyz/2025/08/01/markdownlint_auto_fix/"/>
+    <id>https://tech.he0xwhale.xyz/2025/08/01/markdownlint_auto_fix/</id>
+    <published>2025-08-01T02:00:00.000Z</published>
+    <updated>2025-08-01T03:44:13.763Z</updated>
+    
+    <content type="html"><![CDATA[<p>在整理一个包含大量 Markdown 文档的项目时，编辑器（VS Code）中出现了大量 <code>MD032/blanks-around-lists</code> 的提示，意思是“列表前后应有空行”。由于涉及文档数量众多，手动修复非常耗时，因此我们尝试寻找一键修复的方法，以下是完整的排查与解决过程记录。</p><h2 id="初步调查：确认提示信息"><a href="#初步调查：确认提示信息" class="headerlink" title="初步调查：确认提示信息"></a>初步调查：确认提示信息</h2><p>在 VS Code 中安装了官方推荐的 Markdown 插件（<a href="https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint">David Anson 的 Markdownlint</a>）后，文档中出现了大量如下提示：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MD032/blanks-around-lists: Lists should be surrounded by blank lines</span><br></pre></td></tr></table></figure><p>这属于 markdownlint 的一条格式规则，主要目的是增强可读性和统一性。</p><h2 id="查找自动修复工具"><a href="#查找自动修复工具" class="headerlink" title="查找自动修复工具"></a>查找自动修复工具</h2><p>我们首先了解到了 <code>markdownlint-cli2</code> 工具，它是一个命令行工具，支持 lint 多个文件，也支持批量修复。</p><h3 id="安装-markdownlint-cli2"><a href="#安装-markdownlint-cli2" class="headerlink" title="安装 markdownlint-cli2"></a>安装 markdownlint-cli2</h3><p>可使用如下命令全局安装（或使用 <code>npx</code> 临时运行）：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g markdownlint-cli2</span><br></pre></td></tr></table></figure><h3 id="执行修复命令"><a href="#执行修复命令" class="headerlink" title="执行修复命令"></a>执行修复命令</h3><p>最关键的是使用 <code>--fix</code> 参数：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">markdownlint-cli2 <span class="string">&quot;**/*.md&quot;</span> <span class="string">&quot;#node_modules&quot;</span> --fix</span><br></pre></td></tr></table></figure><p>其中：</p><ul><li><code>&quot;**/*.md&quot;</code> 表示匹配当前目录及子目录下所有 <code>.md</code> 文件</li><li><code>&quot;#node_modules&quot;</code> 表示排除 <code>node_modules</code> 文件夹</li><li><code>--fix</code> 表示自动修复支持的规则</li></ul><p>执行后终端输出显示：</p><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Summary: 25 error(s)</span><br></pre></td></tr></table></figure><p>可以看到诸如 <code>MD032</code> 的错误已被成功修复。</p><h2 id="处理未修复的规则"><a href="#处理未修复的规则" class="headerlink" title="处理未修复的规则"></a>处理未修复的规则</h2><p>自动修复后，还剩下一些不能自动修复的错误，包括：</p><table><thead><tr><th>规则</th><th>含义</th><th>建议</th></tr></thead><tbody><tr><td><code>MD013</code></td><td>行长度超出限制（默认 80）</td><td>可手动换行，或禁用</td></tr><tr><td><code>MD040</code></td><td>代码块未指定语言</td><td>建议改成 <code>bash、</code>python 等</td></tr><tr><td><code>MD036</code></td><td>使用斜体模拟标题</td><td>应使用 #、## 等 Markdown 标题语法</td></tr></tbody></table><h2 id="可选配置：禁用部分规则"><a href="#可选配置：禁用部分规则" class="headerlink" title="可选配置：禁用部分规则"></a>可选配置：禁用部分规则</h2><p>在 <code>.markdownlint.json</code> 中可禁用不希望使用的规则：</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;MD013&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;MD036&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;MD040&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><h2 id="补充说明：关于误传的-markdownlint-cli2-fix"><a href="#补充说明：关于误传的-markdownlint-cli2-fix" class="headerlink" title="补充说明：关于误传的 markdownlint-cli2-fix"></a>补充说明：关于误传的 <code>markdownlint-cli2-fix</code></h2><p>在过程中我们曾尝试安装名为 <code>markdownlint-cli2-fix</code> 的包：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g markdownlint-cli2-fix</span><br></pre></td></tr></table></figure><p>但发现该包并不存在，最终确认：<code>markdownlint-cli2</code> 本身已内置 <code>--fix</code> 功能，不需要安装额外的工具。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过 <code>markdownlint-cli2 --fix</code>，我们顺利解决了 Markdown 项目中的批量格式问题，尤其是大量 <code>MD032</code> 报错，极大提升了文档质量和维护效率。结合配置文件与简单的脚本处理，其它无法自动修复的错误也可以高效清理。</p><p>对于文档量大或协作性强的项目，建议将 lint 步骤加入 CI&#x2F;CD 流程，确保格式统一、阅读体验良好。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在整理一个包含大量 Markdown 文档的项目时，编辑器（VS Code）中出现了大量 &lt;code&gt;MD032/blanks-around-lists&lt;/code&gt; 的提示，意思是“列表前后应有空行”。由于涉及文档数量众多，手动修复非常耗时，因此我们尝试寻找一键修复的方法</summary>
+      
+    
+    
+    
+    
+    <category term="Markdown" scheme="https://tech.he0xwhale.xyz/tags/Markdown/"/>
+    
+    <category term="VS Code" scheme="https://tech.he0xwhale.xyz/tags/VS-Code/"/>
+    
+    <category term="格式规范" scheme="https://tech.he0xwhale.xyz/tags/%E6%A0%BC%E5%BC%8F%E8%A7%84%E8%8C%83/"/>
+    
+    <category term="文档质量" scheme="https://tech.he0xwhale.xyz/tags/%E6%96%87%E6%A1%A3%E8%B4%A8%E9%87%8F/"/>
+    
+    <category term="自动化工具" scheme="https://tech.he0xwhale.xyz/tags/%E8%87%AA%E5%8A%A8%E5%8C%96%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>利用 ProxyJump 和 SSHFS 实现主机间免密访问：一次完整的排错记录</title>
